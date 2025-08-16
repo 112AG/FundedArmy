@@ -96,7 +96,7 @@ function Promise() {
         {
           height: "100%",
           ease: "none",
-          duration: 1,
+          duration: 0.2,
         }
       )
       .fromTo(
@@ -105,7 +105,7 @@ function Promise() {
         {
           height: "100%",
           ease: "none",
-          duration: 1,
+          duration: 0.2,
         },
         "+=0"
       );

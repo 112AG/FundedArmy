@@ -189,7 +189,7 @@ function WhoIam() {
             <h2 className="text-[40px] font-[700] leading-[27px] text-[#a6f58b] mb-[8px]">
               I am Sachin Rao
             </h2>
-            <p className="text-white text-[20px] font-[700] leading-[27px]">
+            <p className="text-white text-[20px]  leading-[27px]">
               A former fitness entrepreneur turned full-time trader on a mission
               to build wealth, freedom, and future-proof financial skills.
               <br />
