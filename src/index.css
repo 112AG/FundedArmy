@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; 
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/inter/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/inter/Inter_18pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/inter/Inter_18pt-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/inter/Inter_18pt-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/inter/Inter_18pt-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: 'Inter', Arial, sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.videoSwiper {
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.videoSwiper .swiper-slide {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.videoSwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.videoSwiper .swiper-slide-active {
+  transform: scale(1.05);
+}
+.videoSwiper .swiper-slide-active img {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.videoSwiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.videoSwiper .swiper-slide .group:hover .bg-white {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #9DF280;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  background: #82E95F;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.swiper-button-prev-custom {
+  left: 20px;
+}
+.swiper-button-next-custom {
+  right: 20px;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+div {
+  scrollbar-width: none; 
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scrollLeft {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+@keyframes scrollRightSlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll-right {
+  animation: scrollRight 120s linear infinite;
+}
+.animate-scroll-left {
+  animation: scrollLeft 140s linear infinite;
+}
+.animate-scroll-right-slow {
+  animation: scrollRightSlow 130s linear infinite;
+}
+
+.bg-img {
+  background-image: url('./assets/paths/globalTradingAcademy-programbackground.svg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  height: 1300px;
+}
+.bg-card {
+  background-image: url('./assets/choicecardsbackground.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1200px;
+}
+@media (max-width: 768px) {
+  .bg-card {
+    height: auto; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px;
+  }
+}
+
+/* ✅ Hero Background Fix */
+.hero-background {
+  background-image: url('./assets/heroImages/globalTradingAcademy-background.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 950px;
+}
+@media (max-width: 1424px) {
+  .hero-background { height: 748px; }
+}
+@media (max-width: 1024px) {
+  .hero-background { height: 998px; }
+}
+@media (max-width: 640px) {
+  .hero-background { height: 938px; }
+}
+
+/* ✅ Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
