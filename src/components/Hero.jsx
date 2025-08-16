@@ -170,7 +170,7 @@ function Hero() {
         </div>
 
         {/* Desktop View */}
-e        <div className="xl:py-[60px] hidden w-full max-w-[1580px] gap-6 mx-auto sm:flex justify-between items-start flex-col-reverse lg:flex-row font-inter">
+        <div className="xl:py-[60px] hidden w-full max-w-[1580px] gap-6 mx-auto sm:flex justify-between items-start flex-col-reverse lg:flex-row font-inter">
           {/* Left */}
           <div className="w-full lg:w-[50%] font-inter z-40">
             <h1 className="w-full xl:w-[666px] xl:h-[201px] font-[900] text-[28px] sm:text-[32px] md:text-[32px] xl:text-[48px] leading-[32px] sm:leading-[42px] md:leading-[38px] xl:leading-[55px] uppercase text-white mb-4 lg:mb-0">
