@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import background from "../assets/ourpromises/globalTradingAcademy-Container.svg";
-import call from "../assets/ourpromises/globalTradingAcademy-oncall.svg";
-import laptop from "../assets/ourpromises/globalTradingAcademy-onlaptop.svg";
-import tablet from "../assets/ourpromises/globalTradingAcademy-tablet.svg";
+import background from "../assets/ourpromises/globalTradingAcademy-Container.webp";
+import call from "../assets/ourpromises/globalTradingAcademy-oncall.webp";
+import laptop from "../assets/ourpromises/globalTradingAcademy-onlaptop.webp";
+import tablet from "../assets/ourpromises/globalTradingAcademy-tablet.webp";
 import certify from "../assets/ourpromises/globalTradingAcademy-certificate.png";
 import income from "../assets/ourpromises/globalTradingAcademy-income.png";
 import doubt from "../assets/ourpromises/globalTradingAcademy-doubt.png";

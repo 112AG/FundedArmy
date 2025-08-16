@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import pathImage from "../assets/paths/globalTradingAcademy-paths.svg";
-import connector from "../assets/paths/globalTradingAcademy-connector.svg";
+import pathImage from "../assets/paths/globalTradingAcademy-paths.webp";
+import connector from "../assets/paths/globalTradingAcademy-connector.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 

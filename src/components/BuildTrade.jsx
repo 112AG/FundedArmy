@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import guidance from "../assets/teachTrading/globalTradingAcademy-group.png";
 import vector from "../assets/teachTrading/globalTradingAcademy-learning.png";
 import learning from "../assets/teachTrading/globalTradingAcademy-Vector.png";
-import teachTrade from "../assets/teachTrading/globalTradingAcademy-teachtrading.svg";
+import teachTrade from "../assets/teachTrading/globalTradingAcademy-teachtrading.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 function BuildTrade() {
@@ -83,7 +83,7 @@ function BuildTrade() {
     <div className="pt-[80px] sm:pt-[186px] pb-[100px] sm:pb-[216px] font-inter px-4 2xl:px-0 z-50">
       <div
         ref={textRef}
-        className="uppercase text-center text-[28px] sm:text-[48px] font-[900] leading-[32px] sm:leading-[48px]"
+        className="uppercase hidden sm:block text-center text-[28px] sm:text-[48px] font-[900] leading-[32px] sm:leading-[48px]"
         style={{
           background: "linear-gradient(90deg, #c4ffb0 0%, #82e95f 100%)",
           WebkitBackgroundClip: "text",
@@ -96,13 +96,13 @@ function BuildTrade() {
       </div>{" "}
       <p
         ref={textRefTwo}
-        className="uppercase text-center text-[24px] sm:text-[32px] font-[900] leading-[32px] sm:leading-[48px] text-white py-2"
+        className="uppercase hidden sm:block text-center text-[24px] sm:text-[32px] font-[900] leading-[32px] sm:leading-[48px] text-white py-2"
       >
         we build real traders
       </p>
       <p
         ref={textRefThree}
-        className="w-full 2xl:w-[1237px] mx-auto 2xl:h-[181px] text-[16px] sm:text-[20px] text-center sm:font-[700] leading-[22px] sm:leading-[27px] text-white"
+        className="w-full hidden sm:block 2xl:w-[1237px] mx-auto 2xl:h-[181px] text-[16px] sm:text-[20px] text-center leading-[22px] sm:leading-[27px] text-white"
       >
         At Global Trading Academy, we do things differently. Led by Sachin Rao
         an experienced trader with years in live markets we offer more than just
@@ -117,7 +117,7 @@ function BuildTrade() {
       </p>
 <div
   ref={cardsContainerRef}
-  className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-[12px] sm:gap-[24px] pt-[20px] sm:pt-[40px]"
+  className="hidden sm:flex flex-col sm:flex-row flex-wrap items-center justify-center gap-[12px] sm:gap-[24px] pt-[20px] sm:pt-[40px]"
 >
   {/* one */}
   <div
@@ -127,7 +127,7 @@ function BuildTrade() {
       h-[56px] sm:h-[70px] lg:h-[76px] xl:h-[78px] 2xl:h-[80px]
       py-[8px] sm:py-[14px] lg:py-[15px] 2xl:py-[16px]
       px-[10px] sm:px-[20px] lg:px-[22px] xl:px-[24px] 2xl:px-[26px]
-      flexcol justify-center items-center"
+      flexcol justify-center items-center gap-[24px]"
     style={{
       background:
         "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
@@ -136,8 +136,7 @@ function BuildTrade() {
     }}
   >
     <img src={guidance} alt="image" className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto" />
-    <p className="w-[160px] sm:w-[200px] lg:w-[220px] xl:w-[240px] 2xl:w-[256px] 
-      text-white text-center 
+    <p className="text-white text-center 
       text-[16px] sm:text-[20px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]
       font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]">
       Real guidance
@@ -152,7 +151,7 @@ function BuildTrade() {
       h-[56px] sm:h-[70px] lg:h-[76px] xl:h-[78px] 2xl:h-[80px]
       py-[8px] sm:py-[14px] lg:py-[15px] 2xl:py-[16px]
       px-[10px] sm:px-[20px] lg:px-[22px] xl:px-[24px] 2xl:px-[26px]
-      flexcol justify-center items-center"
+      flexcol justify-center items-center gap-[24px]"
     style={{
       background:
         "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
@@ -161,8 +160,7 @@ function BuildTrade() {
     }}
   >
     <img src={learning} alt="image" className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto" />
-    <p className="w-[160px] sm:w-[200px] lg:w-[220px] xl:w-[240px] 2xl:w-[256px] 
-      text-white text-center 
+    <p className="text-white text-center 
       text-[16px] sm:text-[20px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]
       font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]">
       Practical systems
@@ -177,7 +175,7 @@ function BuildTrade() {
       h-[56px] sm:h-[70px] lg:h-[76px] xl:h-[78px] 2xl:h-[80px]
       py-[8px] sm:py-[14px] lg:py-[15px] 2xl:py-[16px]
       px-[10px] sm:px-[20px] lg:px-[22px] xl:px-[24px] 2xl:px-[26px]
-      flexcol justify-center items-center"
+      flexcol justify-center items-center gap-[24px]"
     style={{
       background:
         "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
@@ -186,8 +184,7 @@ function BuildTrade() {
     }}
   >
     <img src={vector} alt="image" className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto" />
-    <p className="w-[160px] sm:w-[200px] lg:w-[220px] xl:w-[240px] 2xl:w-[256px] 
-      text-white text-center 
+    <p className="text-white text-center 
       text-[16px] sm:text-[20px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]
       font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]">
       Personal feedback

@@ -6,8 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 import classOne from "../assets/heroImages/globalTradingAcademy-classes.webp";
 import classTwo from "../assets/heroImages/globalTradingAcademy-classes2.webp";
 import classThree from "../assets/heroImages/globalTradingAcademy-classes3.webp";
-import leftblur from "../assets/heroImages/globalTradingAcademy-foregroundblurleft.svg";
-import rightblur from "../assets/heroImages/globalTradingAcademy-foregroundblurright.svg";
+import leftblur from "../assets/heroImages/globalTradingAcademy-foregroundblurleft.webp";
+import rightblur from "../assets/heroImages/globalTradingAcademy-foregroundblurright.webp";
 import usFlag from "../assets/heroImages/globalTradingAgency-usFlag.webp";
 
 const HeroCards = () => {

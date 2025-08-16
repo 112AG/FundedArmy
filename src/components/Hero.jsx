@@ -61,10 +61,10 @@ function Hero() {
   }, []);
 
   return (
-    <div className="hero-background">
+    <div className="hero-background font-inter">
       <Header />
-      <div ref={heroRef} className="px-4 2xl:px-0 hero-card">
-        <div className="pb-8 xl:py-[60px] w-full max-w-[1580px] mx-auto flex sm:hidden justify-between items-start flex-col lg:flex-row font-inter">
+      <div ref={heroRef} className="sm:px-[100px] hero-card">
+        <div className="pb-8 w-full max-w-[1580px] mx-auto flex sm:hidden justify-between items-start flex-col lg:flex-row font-inter">
           {/* Left */}
           <div className="w-full lg:w-[50%] font-inter z-40">
             <h1 className="w-full xl:w-[666px] xl:h-[201px] text-center font-[900] text-[22px] sm:text-[32px] md:text-[32px] xl:text-[48px] leading-[32px] sm:leading-[42px] md:leading-[38px] xl:leading-[55px] uppercase text-white mb-4 lg:mb-0">
@@ -77,7 +77,7 @@ function Hero() {
                 FROM <span className="text-[#9DF280]">DAY</span> ONE.
               </span>
             </h1>
-            <p className="w-full xl:w-[641px] text-center lg:h-[139px] text-[14px] sm:text-[18px] lg:text-[20px] font-[100] leading-[22px] sm:leading-[25px] lg:leading-[27px] text-[#fff] mb-6">
+            <p className="w-full xl:w-[641px] text-center lg:h-[139px] text-[14px] sm:text-[18px] lg:text-[20px] leading-[22px] sm:leading-[25px] lg:leading-[27px] text-[#fff] mb-6">
               No recycled signals or empty promises just direct coaching, clear
               strategies, and practical trading systems that help you trade with
               confidence and stay on track.
@@ -170,7 +170,7 @@ function Hero() {
         </div>
 
         {/* Desktop View */}
-        <div className="xl:py-[60px] hidden w-full max-w-[1580px] gap-6 mx-auto sm:flex justify-between items-start flex-col-reverse lg:flex-row font-inter">
+        <div className="hidden w-full max-w-[1580px] gap-6 mx-auto sm:flex justify-between items-start flex-col-reverse lg:flex-row font-inter">
           {/* Left */}
           <div className="w-full lg:w-[50%] font-inter z-40">
             <h1 className="w-full xl:w-[666px] xl:h-[201px] font-[900] text-[28px] sm:text-[32px] md:text-[32px] xl:text-[48px] leading-[32px] sm:leading-[42px] md:leading-[38px] xl:leading-[55px] uppercase text-white mb-4 lg:mb-0">
@@ -183,7 +183,7 @@ function Hero() {
                 FROM <span className="text-[#9DF280]">DAY</span> ONE.
               </span>
             </h1>
-            <p className="w-full xl:w-[641px] h-[108px] 2xl:h-[139px] text-[16px] sm:text-[18px] xl:text-[20px] font-[700] leading-[22px] sm:leading-[25px] xl:leading-[27px] text-[#fff]">
+            <p className="w-full xl:w-[641px] h-[108px] 2xl:h-[139px] text-[16px] sm:text-[18px] xl:text-[20px] leading-[22px] sm:leading-[25px] xl:leading-[27px] text-[#fff]">
               No recycled signals or empty promises just direct coaching, clear
               strategies, and practical trading systems that help you trade with
               confidence and stay on track.

@@ -1,10 +1,10 @@
 import React, { useRef, useMemo } from "react";
-import certificate1 from "../assets/certificates/globalTradingAcademy-certificateone.svg";
-import certificate2 from "../assets/certificates/globalTradingAcademy-certificatetwo.svg";
-import certificate5 from "../assets/certificates/globalTradingAcademy-certificatefive.svg";
-import certificate4 from "../assets/certificates/globalTradingAcademy-certificatefour.svg";
-import certificate3 from "../assets/certificates/globalTradingAcademy-certificatethree.svg";
-import certificate6 from "../assets/certificates/globalTradingAcademy-certificatesix.svg";
+import certificate1 from "../assets/certificates/globalTradingAcademy-certificateone.webp";
+import certificate2 from "../assets/certificates/globalTradingAcademy-certificatetwo.webp";
+import certificate5 from "../assets/certificates/globalTradingAcademy-certificatefive.webp";
+import certificate4 from "../assets/certificates/globalTradingAcademy-certificatefour.webp";
+import certificate3 from "../assets/certificates/globalTradingAcademy-certificatethree.webp";
+import certificate6 from "../assets/certificates/globalTradingAcademy-certificatesix.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -91,7 +91,7 @@ function Achievement() {
       </h1>
       <p
         ref={textRefTwo}
-        className="w-full lg:w-[963px] mx-auto h-auto lg:h-[139px] text-white text-[16px] lg:text-[20px] text-center sm:font-[700] leading-[22px] lg:leading-[27px] mb-8 lg:mb-0 px-4"
+        className="w-full lg:w-[963px] mx-auto h-auto lg:h-[139px] text-white text-[16px] lg:text-[20px] text-center leading-[22px] lg:leading-[27px] mb-8 lg:mb-0 px-4"
       >
         Backed by results you can see: verified certificates, funded accounts,
         and real milestones from our growing trading community.

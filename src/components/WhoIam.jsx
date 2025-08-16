@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import owner from "../assets/SachinRaw.svg";
+import owner from "../assets/SachinRaw.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 

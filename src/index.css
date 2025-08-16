@@ -187,7 +187,7 @@ div {
 
 /* ✅ Hero Background Fix */
 .hero-background {
-  background-image: url('./assets/heroImages/globalTradingAcademy-background.svg');
+  background-image: url('./assets/heroImages/globalTradingAcademy-background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

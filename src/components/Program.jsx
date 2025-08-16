@@ -3,10 +3,10 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import pathImagetwo from "../assets/paths/globalTradingAcademy-programbackground.svg";
-import masterprogram from "../assets/paths/globalTradingAcademy-masteryprogram.svg";
-import gradeint1 from "../assets/paths/gradient1.svg";
-import gradeint2 from "../assets/paths/gradient2.svg";
+import pathImagetwo from "../assets/paths/globalTradingAcademy-programbackground.webp";
+import masterprogram from "../assets/paths/globalTradingAcademy-masteryprogram.webp";
+import gradeint1 from "../assets/paths/gradient1.webp";
+import gradeint2 from "../assets/paths/gradient2.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -162,7 +162,7 @@ function Program() {
           </svg>
           <p
             ref={textRef}
-            className="w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[500px] xl:w-[573px] text-[#fff] text-[16px] sm:text-[20px] lg:text-[22px] xl:text-[24px] sm:font-[700] leading-[22px] sm:leading-[28px] lg:leading-[30px] xl:leading-[33px] py-[12px] sm:py-[16px] pb-[32px] sm:pb-[48px] xl:pb-[64px]"
+            className="w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[500px] xl:w-[573px] text-[#fff] text-[16px] sm:text-[20px] lg:text-[22px] xl:text-[24px] leading-[22px] sm:leading-[28px] lg:leading-[30px] xl:leading-[33px] py-[12px] pb-[32px] sm:pb-[48px] "
           >
             Accelerate your journey to prop firm success with 30 days of live
             training, real strategy, and personal mentorship.
@@ -172,7 +172,7 @@ function Program() {
             href="https://sachin4803.graphy.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 sm:mt-6 uppercase w-full max-w-[300px] sm:max-w-[400px] z-30 xl:w-[474px] h-[56px] sm:h-[64px] xl:h-[72px] flex items-center justify-center border-[4px] border-white py-[12px] sm:py-[16px] px-[16px] sm:px-[20px] xl:px-[26px]"
+            className="uppercase w-full max-w-[300px] sm:max-w-[400px] z-30 xl:w-[474px] h-[56px] sm:h-[64px] xl:h-[72px] flex items-center justify-center border-[4px] border-white py-[12px] sm:py-[16px] px-[16px] sm:px-[20px] xl:px-[26px]"
             style={{
               background:
                 "linear-gradient(92deg, rgba(109, 255, 119, 0.40) 30%, rgba(0, 255, 0, 0.20) 83.56%)",

@@ -1,37 +1,20 @@
-import React, { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
-import Header from "./components/Header";
+import React, { useEffect } from "react";
 import Home from "./pages/Home";
-import gsap from "gsap";
+import Lenis from "@studio-freight/lenis";
 
 function App() {
-    const marqueeRef = useRef(null);
-
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.2, // smoothness speed
       smooth: true,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easing curve
     });
 
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
-
-    const marquee = marqueeRef.current;
-    const totalWidth = marquee.scrollWidth / 2; 
-    gsap.fromTo(
-      marquee,
-      { x: 0 },
-      {
-        x: -totalWidth,
-        duration: 20,
-        ease: "none",
-        repeat: -1,
-      }
-    );
 
     return () => {
       lenis.destroy();
@@ -40,26 +23,7 @@ function App() {
 
   return (
     <div className="bg-[#02040E] w-full overflow-x-hidden">
-      {/* ✅ The marquee */}
-      <div className="bg-[#dc2626] overflow-hidden whitespace-nowrap">
-        <div
-          ref={marqueeRef}
-          className="flex w-max text-white font-bold text-sm sm:text-lg"
-        >
-          <span>
-            TRANSFORM YOUR TRADING IN 30 DAYS WITH PROVEN 1:1 MENTORSHIP •
-            TRANSFORM YOUR TRADING IN 30 DAYS WITH PROVEN 1:1 MENTORSHIP •
-            TRANSFORM YOUR TRADING IN 30 DAYS WITH PROVEN 1:1 MENTORSHIP •
-          </span>
-          <span className="ml-8">
-            TRANSFORM YOUR TRADING IN 30 DAYS WITH PROVEN 1:1 MENTORSHIP •
-            TRANSFORM YOUR TRADING IN 30 DAYS WITH PROVEN 1:1 MENTORSHIP •
-            TRANSFORM YOUR TRADING IN 30 DAYS WITH PROVEN 1:1 MENTORSHIP •
-          </span>
-        </div>
-      </div> 
       <Home />
-
     </div>
   );
 }

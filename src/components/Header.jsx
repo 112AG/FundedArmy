@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import logo from "../assets/headerImages/global-trading-academy.svg";
-import menu from "../assets/headerImages/globalTradingAcademy-menu.svg";
+import menu from "../assets/headerImages/globalTradingAcademy-menu.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 function Header() {
@@ -41,7 +41,7 @@ function Header() {
   const text = "MENU";
 
   return (
-    <div ref={itemsRef} className="font-poppins px-4">
+    <div ref={itemsRef} className="font-poppins px-4 sm:px-[100px]">
       <div className="py-6 sm:py-[36px] 2xl:py-[57px] max-w-[1580px] mx-auto flex justify-between">
         {/* left */}
         <img

@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import one from "../assets/resultprofit/fundedarmy1.png";
-import two from "../assets/resultprofit/fundedarmy2.png";
-import three from "../assets/resultprofit/fundedarmy3.png";
-import four from "../assets/resultprofit/fundedarmy4.png";
-import five from "../assets/resultprofit/fundedarmy5.png";
-import six from "../assets/resultprofit/fundedarmy6.png";
-import leftblur from "../assets/heroImages/globalTradingAcademy-foregroundblurleft.svg";
-import rightblur from "../assets/heroImages/globalTradingAcademy-foregroundblurright.svg";
+import one from "../assets/resultprofit/fundedarmy1.webp";
+import two from "../assets/resultprofit/fundedarmy2.webp";
+import three from "../assets/resultprofit/fundedarmy3.webp";
+import four from "../assets/resultprofit/fundedarmy4.webp";
+import five from "../assets/resultprofit/fundedarmy5.webp";
+import six from "../assets/resultprofit/fundedarmy6.webp";
+import leftblur from "../assets/heroImages/globalTradingAcademy-foregroundblurleft.webp";
+import rightblur from "../assets/heroImages/globalTradingAcademy-foregroundblurright.webp";
 
 function RealResult() {
   const baseSlides = [one, two, three, four, five, six];

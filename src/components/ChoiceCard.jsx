@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import background from "../assets/choicecardsbackground.svg";
+import background from "../assets/choicecardsbackground.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
