@@ -79,20 +79,36 @@ function Promise() {
       );
     });
 
-    gsap.fromTo(
-      ".stick",
-      { height: 0 },
-      {
-        height: "100%",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".promise-scroll",
-          start: "top 10%",
-          end: "bottom bottom",
-          scrub: true,
+    const stickTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".promise-scroll",
+        start: "top 40%",
+        end: "bottom 60%",
+        scrub: true,
+        markers: false,
+      },
+    });
+
+    stickTimeline
+      .fromTo(
+        ".stick",
+        { height: 0 },
+        {
+          height: "100%",
+          ease: "none",
+          duration: 1,
+        }
+      )
+      .fromTo(
+        ".stickPart2",
+        { height: 0 },
+        {
+          height: "100%",
+          ease: "none",
+          duration: 1,
         },
-      }
-    );
+        "+=0"
+      );
 
     gsap.fromTo(
       ".stick2",
@@ -213,10 +229,13 @@ function Promise() {
       <div className="hidden lg:block pt-[120px] absolute top-0 left-[4%] xl:left-0 w-full mx-auto">
         <div className=" flex items-center justify-center flex-col gap-[14px] absolute top-[8%] left-[22%] xl:left-[50%]">
           <div className="w-[18px] h-[18px] flex-shrink-0 rounded-[500px] bg-[linear-gradient(302deg,#7CE95D_22.95%,#AFA_100%)] shadow-[0_4px_40px_0_#00FF2F]"></div>
-          <div className="w-[4px] h-[1128px] xl:h-[1402px] relative bg-[linear-gradient(180deg,var(--color-white-0,rgba(255,255,255,0)),var(--color-white-20,rgba(255,255,255,0.2))_11.8%,var(--color-white-20,rgba(255,255,255,0.2))_90.6%,var(--color-white-0,rgba(255,255,255,0))_100%)]">
+          <div className="w-[4px] h-[428px] xl:h-[648px] relative bg-[linear-gradient(180deg,var(--color-white-0,rgba(255,255,255,0)),var(--color-white-20,rgba(255,255,255,0.2))_11.8%,var(--color-white-20,rgba(255,255,255,0.2))_90.6%,var(--color-white-0,rgba(255,255,255,0))_100%)]">
             <div className="stick absolute top-0 left-0 w-[4px] bg-[#81E85F]"></div>
           </div>
-
+          <div className="w-[18px] h-[18px] flex-shrink-0 rounded-[500px] bg-[linear-gradient(302deg,#7CE95D_22.95%,#AFA_100%)] shadow-[0_4px_40px_0_#00FF2F]"></div>
+          <div className="w-[4px] h-[428px] xl:h-[648px] relative bg-[linear-gradient(180deg,var(--color-white-0,rgba(255,255,255,0)),var(--color-white-20,rgba(255,255,255,0.2))_11.8%,var(--color-white-20,rgba(255,255,255,0.2))_90.6%,var(--color-white-0,rgba(255,255,255,0))_100%)]">
+            <div className="stickPart2 absolute top-0 left-0 w-[4px] bg-[#81E85F]"></div>
+          </div>
           <div className="w-[18px] h-[18px] flex-shrink-0 rounded-[500px] bg-[linear-gradient(302deg,#7CE95D_22.95%,#AFA_100%)] shadow-[0_4px_40px_0_#00FF2F]"></div>
         </div>
 
@@ -229,7 +248,7 @@ function Promise() {
             <img
               src={feature.image}
               alt={feature.title}
-              className="w-[424px] lg:w-[346px] xl:w-[624px] 2xl:w-[726px] xl:h-[440px]"
+              className="w-[424px] lg:w-[346px] xl:w-[624px] 2xl:w-[726px] xl:h-[440px] object-contain"
             />
             <div className="text-white flex flex-col gap-4 w-[633px]">
               <div className="flex items-center gap-4">

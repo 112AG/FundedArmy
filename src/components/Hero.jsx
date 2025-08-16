@@ -63,7 +63,7 @@ function Hero() {
   return (
     <div className="hero-background font-inter">
       <Header />
-      <div ref={heroRef} className="sm:px-[100px] hero-card">
+      <div ref={heroRef} className="sm:px-[100px] px-4 hero-card">
         <div className="pb-8 w-full max-w-[1580px] mx-auto flex sm:hidden justify-between items-start flex-col lg:flex-row font-inter">
           {/* Left */}
           <div className="w-full lg:w-[50%] font-inter z-40">
@@ -173,7 +173,7 @@ function Hero() {
         <div className="hidden w-full max-w-[1580px] gap-6 mx-auto sm:flex justify-between items-start flex-col-reverse lg:flex-row font-inter">
           {/* Left */}
           <div className="w-full lg:w-[50%] font-inter z-40">
-            <h1 className="w-full xl:w-[666px] xl:h-[201px] font-[900] text-[28px] sm:text-[32px] md:text-[32px] xl:text-[48px] leading-[32px] sm:leading-[42px] md:leading-[38px] xl:leading-[55px] uppercase text-white mb-4 lg:mb-0">
+            <h1 className="w-full 2xl:w-[666px] 2xl:h-[201px] font-[900] text-[28px] sm:text-[32px] 2xl:text-[48px] leading-[32px] sm:leading-[42px] md:leading-[38px] 2xl:leading-[55px] uppercase text-white mb-4 lg:mb-0">
               <span className="text-[#9DF280]">MONEY</span>{" "}
               <span>FOLLOWS SKILL</span>
               <br className="hidden lg:block" />
@@ -183,7 +183,7 @@ function Hero() {
                 FROM <span className="text-[#9DF280]">DAY</span> ONE.
               </span>
             </h1>
-            <p className="w-full xl:w-[641px] h-[108px] 2xl:h-[139px] text-[16px] sm:text-[18px] xl:text-[20px] leading-[22px] sm:leading-[25px] xl:leading-[27px] text-[#fff]">
+            <p className="w-full 2xl:w-[641px] lg:h-[108px] 2xl:h-[139px] text-[16px] sm:text-[18px] xl:text-[20px] leading-[22px] sm:leading-[25px] xl:leading-[27px] text-[#fff]">
               No recycled signals or empty promises just direct coaching, clear
               strategies, and practical trading systems that help you trade with
               confidence and stay on track.

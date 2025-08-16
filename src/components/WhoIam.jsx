@@ -86,10 +86,10 @@ function WhoIam() {
     return () => ctx.revert();
   }, []);
 
-  return (
+  return ( 
     <div
       ref={containerRef}
-      className="font-inter px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0 relative w-full max-w-[1580px] mx-auto sm:mt-[128px] md:mt-[248px] xl:mt-[0px] mb-12 lg:mb-16 xl:mb-20 2xl:mb-0 py-8 lg:py-12 2xl:py-16"
+      className="font-inter px-4 sm:px-6 lg:px-[100px] relative w-full max-w-[1580px] mx-auto sm:mt-[128px] md:mt-[248px] xl:mt-[0px] mb-12 lg:mb-16 xl:mb-20 2xl:mb-0 py-8 lg:py-12 2xl:py-16"
     >
       <div className="pt-4 lg:pt-8 2xl:pt-0">
         <h2
@@ -111,7 +111,7 @@ function WhoIam() {
         </h2>
 
         {/* Mobile/Tablet/Desktop Layout (Below 2xl) */}
-        <div className="2xl:hidden flex flex-col lg:items-start lg:gap-8 xl:gap-12">
+        <div className="xl:hidden flex flex-col lg:items-start lg:gap-8 xl:gap-12">
           <div className="flex-shrink-0 mx-auto w-[80%]">
             <img
               ref={mobileImageRef}
@@ -174,17 +174,17 @@ function WhoIam() {
         </div>
 
         {/* Desktop*/}
-        <div className="hidden 2xl:block relative min-h-[1250px]">
+        <div className="hidden xl:block relative min-h-[850px] xl:min-h-[998px]">
           <img
             ref={desktopImageRef}
             src={owner}
             alt="Sachin Rao"
-            className="relative -left-50 top-8"
+            className="relative xl:-left-40 2xl:-left-50 -left-50  xl:top-14 2xl:top-8 xl:h-[600px] 2xl:h-full"
           />
 
           <div
             ref={desktopTextRef}
-            className="w-[679px] absolute top-12 right-62 2xl:right-16 z-50"
+            className="w-[679px] absolute top-12 right-0 z-50"
           >
             <h2 className="text-[40px] font-[700] leading-[27px] text-[#a6f58b] mb-[8px]">
               I am Sachin Rao

@@ -80,7 +80,7 @@ function BuildTrade() {
     });
   }, []);
   return (
-    <div className="pt-[80px] sm:pt-[186px] pb-[100px] sm:pb-[216px] font-inter px-4 2xl:px-0 z-50">
+    <div className="pt-[80px] sm:pt-[186px] pb-[100px] sm:pb-[216px] font-inter sm:px-[100px] px-4 z-50">
       <div
         ref={textRef}
         className="uppercase hidden sm:block text-center text-[28px] sm:text-[48px] font-[900] leading-[32px] sm:leading-[48px]"
@@ -200,13 +200,14 @@ function BuildTrade() {
         {/* left */}
         <div>
           <div
-            className="w-full  sm:w-[340px] h-auto sm:h-[33px] text-[16px] sm:text-[20px] font-[700] leading-[24px] sm:leading-[48px] uppercase"
+            className="w-full sm:w-[340px] h-auto sm:h-[33px] text-[16px] sm:text-[20px] font-[700] leading-[24px] sm:leading-[48px] uppercase"
             style={{
               background: "linear-gradient(90deg, #c4ffb0 0%, #82e95f 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               color: "transparent",
+              paddingBottom: "4px"
             }}
           >
             30 days is all you need
@@ -225,14 +226,13 @@ function BuildTrade() {
             </span>{" "}
             for the next 30 days
           </div>
-          <p className="text-white text-[16px] sm:text-[20px] sm:font-[700] leading-[22px] sm:leading-[27px] py-4">
+          <p className="text-white text-[16px] sm:text-[20px] leading-[22px] sm:leading-[27px] py-4">
             You can become a profitable trader in just 30 days of relentless
             focus.
           </p>
           <p className="w-full xl:w-[667px] text-white text-[16px] sm:text-[20px] sm:font-[500] leading-[22px] sm:leading-[27px]">
             But only if you follow proven trading systems with the right
             strategies and mentorship.
-            <br />
             <br />
             In the Funded Army, you will gain direct access to expert traders
             and coaches who will guide you through a structured, step-by-step
@@ -264,7 +264,7 @@ function BuildTrade() {
         <img
           src={teachTrade}
           alt="Image"
-          className="w-full h-full object-cover max-w-[350px] sm:max-w-none mx-auto xl:mx-0"
+          className="w-full h-full object-cover sm:max-w-none mx-auto xl:mx-0"
         />
       </div>
     </div>
