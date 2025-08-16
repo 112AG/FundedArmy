@@ -145,7 +145,7 @@ function Promise() {
   }, []);
 
   return (
-    <div className="promise-scroll font-inter px-4 lg:px-0 relative overflow-x-clip h-full">
+    <div className="promise-scroll font-inter relative overflow-x-clip h-full">
       {/* Heading */}
       <div
         className="uppercase text-center text-[28px] sm:text-[36px] lg:text-[48px] font-[900] leading-[32px] sm:leading-[40px] lg:leading-[48px] mb-8 lg:mb-0"

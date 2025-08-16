@@ -61,9 +61,9 @@ function Hero() {
   }, []);
 
   return (
-    <div className="hero-background font-inter">
+    <div className="hero-background font-inter px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
       <Header />
-      <div ref={heroRef} className="sm:px-[100px] px-4 hero-card">
+      <div ref={heroRef} className="hero-card">
         <div className="pb-8 w-full max-w-[1580px] mx-auto flex sm:hidden justify-between items-start flex-col lg:flex-row font-inter">
           {/* Left */}
           <div className="w-full lg:w-[50%] font-inter z-40">

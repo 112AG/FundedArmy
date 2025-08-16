@@ -71,7 +71,7 @@ function Achievement() {
   }, []);
 
   return (
-    <div className="px-4 sm:pt-[164px] lg:pt-0 lg:px-0 pt-2">
+    <div className="sm:pt-[164px] lg:pt-0 pt-2 px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
       <h1
         ref={textRef}
         className="w-full lg:w-[739px] mx-auto pb-2 text-center text-[32px] sm:text-[48px] font-[900] leading-[38px] sm:leading-[55px] uppercase text-white mb-4 sm:mb-0"
@@ -99,7 +99,7 @@ function Achievement() {
 
       <div
         ref={cardsContainerRef}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px] sm:gap-[24px] justify-items-center px:4 lg:px-0 w-full"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px] sm:gap-[24px] justify-items-center lg:px-0 w-full"
       >
         {certificates.map((data, id) => (
           <div

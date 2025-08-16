@@ -19,7 +19,7 @@ function FAQ() {
   };
 
   return (
-    <div className="w-full mx-auto px-4">
+    <div className="w-full mx-auto px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
       <h2 className="uppercase text-[28px] sm:text-[36px] md:text-[44px] xl:text-[48px] text-center font-[900] leading-[36px] sm:leading-[42px] xl:leading-[48px] text-white mb-12">
         frequently
         <span

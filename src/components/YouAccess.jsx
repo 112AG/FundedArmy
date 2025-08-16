@@ -178,8 +178,8 @@ function YouAccess() {
       stagger: 0.2,
       scrollTrigger: {
         trigger: textRef.current,
-        start: "top 70%",
-        end: "top 65%",
+        start: "top 80%",
+        end: "top 75%",
         toggleActions: "play none none reverse",
       },
     });
@@ -194,8 +194,8 @@ function YouAccess() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: section,
-        start: "top 70%",
-        end: "top 65%",
+        start: "top 80%",
+        end: "top 75%",
           toggleActions: "play none none reverse",
         },
       });
@@ -210,8 +210,8 @@ function YouAccess() {
       ease: "power2.out",
       scrollTrigger: {
         trigger: ctaRef.current,
-        start: "top 70%",
-        end: "top 65%",
+        start: "top 80%",
+        end: "top 75%",
         toggleActions: "play none none reverse",
       },
     });
@@ -220,7 +220,7 @@ function YouAccess() {
   }, []);
 
   return (
-    <div className="h-full font-inter px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 py-12">
+    <div className="h-full font-inter py-12 px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
       {/* Heading */}
       <div
         ref={textRef}

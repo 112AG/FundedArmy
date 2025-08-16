@@ -123,7 +123,7 @@ function Program() {
             ref={imgRef}
             src={masterprogram}
             alt="Image"
-            className="w-[200px] lg:w-[400px] xl:w-auto h-auto object-contain"
+            className="w-[200px] lg:w-[400px] h-auto object-contain"
           />
         </div>
         <div className="pt-4 sm:pt-8 xl:pt-22 flex flex-col items-center xl:items-start text-center xl:text-left">

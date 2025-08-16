@@ -45,7 +45,7 @@ const Footer = memo(() => {
   return (
     <div
       ref={footerRef}
-      className="font-[Inter] pt-[60px] sm:pt-[80px] lg:pt-[100px] px-4 sm:px-6 lg:px-8 xl:px-0"
+      className="font-[Inter] pt-[60px] sm:pt-[80px] lg:pt-[100px] px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]"
     >
       {/* Your existing footer JSX unchanged */}
       {/* Main CTA Section */}

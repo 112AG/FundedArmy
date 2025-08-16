@@ -89,7 +89,7 @@ function WhoIam() {
   return ( 
     <div
       ref={containerRef}
-      className="font-inter px-4 sm:px-6 lg:px-[100px] relative w-full max-w-[1580px] mx-auto sm:mt-[128px] md:mt-[248px] xl:mt-[0px] mb-12 lg:mb-16 xl:mb-20 2xl:mb-0 py-8 lg:py-12 2xl:py-16"
+      className="font-inter relative w-full max-w-[1580px] mx-auto sm:mt-[128px] md:mt-[248px] xl:mt-[0px] mb-12 lg:mb-16 xl:mb-20 2xl:mb-0 py-8 lg:py-12 2xl:py-16 px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]"
     >
       <div className="pt-4 lg:pt-8 2xl:pt-0">
         <h2

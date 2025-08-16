@@ -41,7 +41,7 @@ function Header() {
   const text = "MENU";
 
   return (
-    <div ref={itemsRef} className="font-poppins px-4 sm:px-[100px]">
+    <div ref={itemsRef} className="font-poppins">
       <div className="py-6 sm:py-[36px] 2xl:py-[57px] max-w-[1580px] mx-auto flex justify-between">
         {/* left */}
         <img

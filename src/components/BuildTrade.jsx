@@ -80,7 +80,7 @@ function BuildTrade() {
     });
   }, []);
   return (
-    <div className="pt-[80px] sm:pt-[186px] pb-[100px] sm:pb-[216px] font-inter sm:px-[100px] px-4 z-50">
+    <div className="pt-[80px] sm:pt-[186px] pb-[100px] sm:pb-[216px] font-inter z-50 px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
       <div
         ref={textRef}
         className="uppercase hidden sm:block text-center text-[28px] sm:text-[48px] font-[900] leading-[32px] sm:leading-[48px]"
