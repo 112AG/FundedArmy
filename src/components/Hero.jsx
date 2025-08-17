@@ -84,7 +84,7 @@ function Hero() {
             </p>
           </div>
           {/* Right */}
-          <div className="w-full xl:w-1/2 flex justify-center items-center mb-8 lg:mb-0 px-2">
+          <div className="w-full xl:w-1/2 flex justify-center items-center">
             <img
               src={coursee}
               alt="main-image"
@@ -92,7 +92,7 @@ function Hero() {
             />
           </div>
           {/* Third */}
-          <div className="flex flex-wrap px-4 sm:px-0 w-full">
+          <div className="flex flex-wrap w-full">
             <a
               href="https://sachin4803.graphy.com/s/store"
               target="_blank"
@@ -105,7 +105,7 @@ function Hero() {
                 backdropFilter: "blur(12.5px)",
               }}
             >
-              <h2 className="font-semibold text-base sm:text-xl md:text-2xl lg:text-3xl leading-tight text-white text-center">
+              <h2 className="font-semibold text-[14px] sm:text-xl leading-tight text-white text-center">
                 start earning through skill
               </h2>
             </a>

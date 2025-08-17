@@ -104,7 +104,7 @@ function BuildTrade() {
         ref={textRefThree}
         className="w-full hidden sm:block 2xl:w-[1237px] mx-auto 2xl:h-[181px] text-[16px] sm:text-[20px] text-center leading-[22px] sm:leading-[27px] text-white"
       >
-        At Global Trading Academy, we do things differently. Led by Sachin Rao
+        At Funded Army, we do things differently. Led by Sachin Rao
         an experienced trader with years in live markets we offer more than just
         lessons. You get personal mentorship, clear rules, and a community built
         for real results.
@@ -230,7 +230,7 @@ function BuildTrade() {
             You can become a profitable trader in just 30 days of relentless
             focus.
           </p>
-          <p className="w-full xl:w-[667px] text-white text-[16px] sm:text-[20px] sm:font-[500] leading-[22px] sm:leading-[27px]">
+          <p className="w-full xl:w-[667px] text-white text-[16px] sm:text-[20px] leading-[22px] sm:leading-[27px]">
             But only if you follow proven trading systems with the right
             strategies and mentorship.
             <br />

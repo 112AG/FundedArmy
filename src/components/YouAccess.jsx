@@ -268,7 +268,7 @@ function YouAccess() {
                     <div className="">
                       <CheckIcon />
                     </div>
-                    <p className="text-[12.5px] sm:text-[15px] md:text-[16px] font-[700]">
+                    <p className="text-[12.5px] sm:text-[15px] md:text-[16px]">
                       {point}
                     </p>
                   </div>
@@ -289,7 +289,7 @@ function YouAccess() {
                       className="flex items-center gap-[8px] py-[11px] px-[30px] rounded-full bg-[#ffffff11]"
                     >
                       <CheckIcon />
-                      <p className="text-[17.55px] font-[700]">{point}</p>
+                      <p className="text-[17.55px]">{point}</p>
                     </div>
                   ))}
                 </div>

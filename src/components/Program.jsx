@@ -104,7 +104,7 @@ function Program() {
   return (
     <div
       ref={containerRef}
-      className="max-h-[800px] sm:min-h-[600px] lg:max-h-[1200px] overflow-hidden w-full relative md:mb-[87px] py-8 md:py-12 lg:py-16 xl:py-32"
+      className="max-h-[800px] mx-auto sm:min-h-[600px] lg:max-h-[1200px] overflow-hidden w-full relative md:mb-[87px] py-8 md:py-12 lg:py-16 xl:py-32"
     >
       <div className=" absolute top-0 w-full bg-img hidden sm:block"></div>
       <img
@@ -118,7 +118,7 @@ function Program() {
         className="absolute bottom-0 right-0 w-[50%] sm:w-auto"
       />
       <div className="relative flex justify-center items-center flex-col xl:flex-row gap-8 sm:gap-16 xl:gap-[218px] w-full px-4 sm:px-8 xl:px-0 h-full min-h-[400px] sm:min-h-[500px]">
-        <div className="flex justify-center">
+        <div className="flex justify-center  items-center">
           <img
             ref={imgRef}
             src={masterprogram}
@@ -126,7 +126,7 @@ function Program() {
             className="w-[200px] lg:w-[400px] h-auto object-contain"
           />
         </div>
-        <div className="pt-4 sm:pt-8 xl:pt-22 flex flex-col items-center xl:items-start text-center xl:text-left">
+        <div className="pt-4  max-w-[500px] w-full sm:pt-0 flex flex-col items-center xl:items-start text-center xl:text-left">
           <div
             ref={headingRef}
             className="uppercase text-[28px] sm:text-[36px] lg:text-[42px] xl:text-[48px] font-[900] leading-[32px] sm:leading-[40px] lg:leading-[44px] xl:leading-[48px]"
@@ -136,7 +136,7 @@ function Program() {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               color: "transparent",
-            }}
+            }} 
           >
             our program
           </div>
@@ -172,7 +172,7 @@ function Program() {
             href="https://sachin4803.graphy.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="uppercase w-full max-w-[300px] sm:max-w-[400px] z-30 xl:w-[474px] h-[56px] sm:h-[64px] xl:h-[72px] flex items-center justify-center border-[4px] border-white py-[12px] sm:py-[16px] px-[16px] sm:px-[20px] xl:px-[26px]"
+            className="uppercase w-full sm:max-w-[400px] z-30 xl:w-[474px] h-[56px] sm:h-[64px] xl:h-[72px] flex items-center justify-center border-[4px] border-white py-[12px] sm:py-[16px] px-[16px] sm:px-[20px] xl:px-[26px]"
             style={{
               background:
                 "linear-gradient(92deg, rgba(109, 255, 119, 0.40) 30%, rgba(0, 255, 0, 0.20) 83.56%)",
@@ -180,7 +180,7 @@ function Program() {
               backdropFilter: "blur(12.5px)",
             }}
           >
-            <h2 className="font-[600] text-[18px] sm:text-[18px] lg:text-[22px] xl:text-[22px] whitespace-nowrap leading-[22px] sm:leading-[26px] xl:leading-[28px] text-white text-center">
+            <h2 className="font-[600] text-[15px] sm:text-[18px] lg:text-[22px] xl:text-[22px] whitespace-nowrap leading-[22px] sm:leading-[26px] xl:leading-[28px] text-white text-center">
               join the mastery program
             </h2>
           </a>

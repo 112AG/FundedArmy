@@ -145,7 +145,7 @@ function Promise() {
   }, []);
 
   return (
-    <div className="promise-scroll font-inter relative overflow-x-clip h-full">
+    <div className="promise-scroll font-inter relative overflow-x-clip h-full px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
       {/* Heading */}
       <div
         className="uppercase text-center text-[28px] sm:text-[36px] lg:text-[48px] font-[900] leading-[32px] sm:leading-[40px] lg:leading-[48px] mb-8 lg:mb-0"
@@ -294,7 +294,7 @@ function Promise() {
             backdropFilter: "blur(12.5px)",
           }}
         >
-          <h2 className="font-[600] text-[18px] sm:text-[22px] md:text-[28px] text-white px-2 text-center">
+          <h2 className="font-[600] text-[15px] sm:text-[22px] md:text-[28px] text-white px-2 text-center">
             join a proven system
           </h2>
         </div>
