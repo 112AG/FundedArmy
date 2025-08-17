@@ -321,7 +321,7 @@ function YouAccess() {
           $2500
         </p>
         <a
-          href="https://sachin4803.graphy.com/"
+          href="https://sachin4803.graphy.com/s/store"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 lg:mt-6 uppercase cursor-pointer w-full max-w-[409px] h-[50px] sm:h-[56px] lg:h-[70px] bg-[#00ff004f] border-[2px] sm:border-[3px] lg:border-[4px] border-white flex items-center justify-center hover:bg-[#00ff006f] transition-colors py-3"

@@ -236,7 +236,7 @@ function ChoiceCard() {
               ))}
             </div>
             <a
-              href="https://sachin4803.graphy.com/"
+              href="https://sachin4803.graphy.com/s/store"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 sm:mt-6 uppercase cursor-pointer w-full max-w-[509px] xl:w-[509px] h-auto min-h-[50px] xl:h-[66px] bg-[#00ff004f] border-[4px] border-white flex items-center justify-center px-4 py-3 xl:px-0 xl:py-0"

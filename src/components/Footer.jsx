@@ -50,13 +50,13 @@ const Footer = memo(() => {
       {/* Your existing footer JSX unchanged */}
       {/* Main CTA Section */}
       <div className="max-w-4xl mx-auto">
-        <h2 className="uppercase text-[24px] xs:text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] text-center font-[900] leading-tight text-white mb-4 sm:mb-6 lg:mb-8 px-2">
+        <h2 className="uppercase text-[24px] xs:text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] text-center font-[900] leading-tight text-white px-2">
           Book a<span style={gradientStyle}>&nbsp;Free&nbsp;</span>
           demo
           <span style={gradientStyle}>&nbsp;session</span>
         </h2>
 
-        <p className="text-center text-[14px] sm:text-[16px] lg:text-[18px] font-[700] leading-[20px] sm:leading-[24px] lg:leading-[26px] text-white px-4 sm:px-2 lg:px-0 mb-8 sm:mb-10">
+        <p className="text-center text-[14px] sm:text-[16px] lg:text-[18px] leading-[20px] sm:leading-[24px] lg:leading-[26px] text-white px-4 sm:px-2 lg:px-0 mb-8 sm:mb-10">
           Experience the power of our trading course in action. No commitment.
           Just value.
         </p>
@@ -64,7 +64,7 @@ const Footer = memo(() => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-[60px] sm:mb-[80px] lg:mb-[100px] ">
           <a
-            href="https://sachin4803.graphy.com/s/authenticate?url=/t/myprofile"
+            href="https://calendly.com/sachinrao-fundedarmy/30min?month=2025-08"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white backdrop-blur-[12.5px] whitespace-nowrap w-full sm:w-auto sm:min-w-[251px] h-[55px] px-[20px] bg-[#82e95f] text-[#01030e] uppercase font-[700] leading-[20px] text-[14px] sm:text-[16px] flex items-center justify-center text-center transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_#82e95f] hover:bg-[#6cd94d] hover:-translate-y-[2px] active:scale-90"

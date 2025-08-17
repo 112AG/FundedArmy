@@ -11,6 +11,7 @@ import doubt from "../assets/ourpromises/globalTradingAcademy-doubt.png";
 import cash from "../assets/ourpromises/globalTradingAcademy-cash.png";
 import tick from "../assets/ourpromises/globalTradingAcademy-tick.png";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -285,7 +286,9 @@ function Promise() {
         ref={ctaRef}
         className="flex items-center justify-center gap-2 mt-4 text-white flex-col py-1 xl:py-[108px]"
       >
-        <div
+        <Link
+        to={'https://sachin4803.graphy.com/s/store'}
+        target="_blank"
           className="mt-6 uppercase w-full max-w-[400px] sm:max-w-[509px] h-[50px] sm:h-[60px] border-[2px] sm:border-[4px] border-white flex items-center justify-center"
           style={{
             background:
@@ -297,7 +300,7 @@ function Promise() {
           <h2 className="font-[600] text-[15px] sm:text-[22px] md:text-[28px] text-white px-2 text-center">
             join a proven system
           </h2>
-        </div>
+        </Link>
         <div className="flex items-center justify-center gap-2 mt-4 text-white">
           <img src={cash} alt="cash" className="w-[20px] h-[18px]" />
           <p>

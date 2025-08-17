@@ -23,84 +23,83 @@ function Aboutus() {
   const workImages = [
     {
       image: one,
-      name: "Rohit Mehra",
-      role: "Working Professional",
-      text: "Before joining this course, I had zero knowledge about trading. Now, I can confidently analyze charts and make profitable decisions. It's life-changing!",
+      name: "Aditya Khanna",
+      role: "Businessman",
+      text: "This course gave me clarity and confidence. I no longer depend on tips or guesswork. The mentor is truly experienced and patient.",
     },
     {
       image: two,
-      name: "Aditya Khanna",
-      role: "Investment Banker",
-      text: "The strategies taught are practical and easy to apply. I started seeing consistent profits within the first month itself.",
+      name: "Mohammed Asif",
+      role: "Working Professionals",
+      text: "I joined to learn about intraday trading, but the course opened my eyes to so many other profitable opportunities. It’s more than just a course it’s a system!",
     },
     {
       image: three,
-      name: "Aarav Mehta",
+      name: "Nitesh Jain",
       role: "College Student",
-      text: "I've taken multiple trading courses before, but none were this detailed and beginner-friendly. Highly recommend for anyone serious about trading.",
+      text: "Earlier, I was just gambling in the market. Now, I trade with logic and confidence.",
     },
     {
       image: four,
-      name: "Neha Sharma",
-      role: "House Wife",
-      text: "This course gave me clarity and confidence. No longer depend on tips or guesswork. The mentor is truly experienced and patient.",
+      name: "Simran Kaur",
+      role: "Housewives",
+      text: "I’ve taken multiple trading courses before, but none were this detailed or beginner-friendly. Highly recommend for anyone serious about trading.",
     },
     {
       image: five,
-      name: "Myra Dutta",
-      role: "Working Professional",
-      text: "What I liked the most was the one-on-one mentorship and real-time market guidance. I recovered my course fee within 2 weeks of trading!",
-    },
-    {
-      image: six,
       name: "Tanya Sethi",
-      role: "Job Seeker",
+      role: "Housewives",
       text: "As someone with a full-time job, the flexibility and recorded sessions were a blessing. The community support is also fantastic.",
     },
     {
-      image: seven,
-      name: "Ishita Menon",
-      role: "Working Professional",
-      text: "I joined to learn about intraday trading, but this course opened my eyes to many other profitable ways. It's more than just a course; it's a system!",
-    },
-    {
-      image: eight,
-      name: "Kabir Joshi",
-      role: "Business Man",
-      text: "Excellent value for money. I finally understand risk management, psychology, and strategy — all things that make or break a trader.",
-    },
-    {
-      image: nine,
-      name: "Aryan Gupta",
-      role: "College Student",
-      text: "This course made me confident in trading. I overcame my fear of trading and gradually started growing my capital.",
-    },
-    {
-      image: ten,
-      name: "Rahul Singh",
-      role: "Working Professional",
-      text: "From a complete beginner to making my first profitable trade — all in just a few weeks. Highly recommended!",
-    },
-    {
-      image: eleven,
-      name: "Vihaan Kapoor",
-      role: "Working Professional",
+      image: six,
+      name: "Sneha Rao",
+      role: "Housewives",
       text: "I loved the hands-on approach. We were analyzing live charts and applying strategies from day one.",
     },
     {
+      image: seven,
+      name: "Neha Sharma",
+      role: "Working Professionals",
+      text: "The strategies taught here are practical and easy to apply. I started seeing consistent profits within the first month itself.",
+    },
+    {
+      image: eight,
+      name: "Ravi Kulkarni",
+      role: "Working Professionals",
+      text: "What I liked the most was the one-on-one mentorship and real-time market guidance. I recovered my course fee within 2 weeks of trading!",
+    },
+    {
+      image: nine,
+      name: "Rahul Singh",
+      role: "Working Professionals",
+      text: "From a complete beginner to making my first profitable trade — all in just a few weeks. Highly recommended!",
+    },
+    {
+      image: ten,
+      name: "Aaruv Mehta",
+      role: "Working Professional",
+      text: "Excellent value for money. I finally understand risk management, psychology, and strategy — all things that make or break a trader.",
+    },
+    {
+      image: eleven,
+      name: "Rohit Mehra",
+      role: "College Student",
+      text: `"Before joining this course, I had zero knowledge about trading. Now, I confidently analyze charts and make informed decisions. Truly life-changing!"`,
+    },
+    {
       image: twelve,
-      name: "Riya Deshmukh",
-      role: "House Wife",
-      text: "Earlier, I was just gambling in the market. Now, I trade with logic and confidence.",
+      name: "Ankita Verma",
+      role: "Housewives",
+      text: "The course made me realize the importance of discipline in trading. I stopped overtrading and finally started growing my capital.",
     },
   ];
 
-  // Build a seamless infinite scroll (no UI changes)
   const createInfiniteScroll = (target, direction = 1, speed = 60) => {
     const track = target;
     if (!track) return () => {};
 
-    const getWidth = () => track.scrollWidth / 2; // width of one original set (you already render duplicates)
+    const getWidth = () => track.scrollWidth / 2; 
     let tl = gsap.timeline({ repeat: -1, defaults: { ease: "none" } });
 
     const build = () => {
@@ -108,7 +107,6 @@ function Aboutus() {
       if (!w || !isFinite(w)) return;
       gsap.set(track, { x: 0 });
       tl.clear();
-      // move one full set then instantly reset to 0 -> seamless loop thanks to duplicated content
       tl.to(track, {
         x: direction > 0 ? -w * 0.8 : w * 0.8,
         duration: speed,
@@ -117,19 +115,16 @@ function Aboutus() {
 
     build();
 
-    // Pause/resume on hover (keeps your behavior)
     const onEnter = () => tl.pause();
     const onLeave = () => tl.resume();
     track.addEventListener("mouseenter", onEnter);
     track.addEventListener("mouseleave", onLeave);
 
-    // Rebuild when images load (ensures correct width once assets are ready)
     const imgs = track.querySelectorAll("img");
     imgs.forEach((img) => {
       if (!img.complete) img.addEventListener("load", build, { once: true });
     });
 
-    // Rebuild when size changes
     let ro;
     let onResize;
     if ("ResizeObserver" in window) {

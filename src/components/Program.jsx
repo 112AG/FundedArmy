@@ -169,7 +169,7 @@ function Program() {
           </p>
           <a
             ref={btnRef}
-            href="https://sachin4803.graphy.com/"
+            href="https://sachin4803.graphy.com/s/store"
             target="_blank"
             rel="noopener noreferrer"
             className="uppercase w-full sm:max-w-[400px] z-30 xl:w-[474px] h-[56px] sm:h-[64px] xl:h-[72px] flex items-center justify-center border-[4px] border-white py-[12px] sm:py-[16px] px-[16px] sm:px-[20px] xl:px-[26px]"
