@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Home from "./pages/Home";
 import Lenis from "@studio-freight/lenis";
+import { Route, Routes } from "react-router-dom";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   useEffect(() => {
@@ -23,7 +25,10 @@ function App() {
 
   return (
     <div className="bg-[#02040E] w-full overflow-x-hidden">
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="*" element={<PageNotFound/>}/>
+      </Routes>
     </div>
   );
 }

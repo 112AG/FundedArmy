@@ -94,7 +94,7 @@ function Hero() {
           {/* Third */}
           <div className="flex flex-wrap w-full">
             <a
-              href="https://sachin4803.graphy.com/s/store"
+              href="https://courses.fundedarmy.com/courses/Prop-Firm-Mastery-Program-from-Sachin-Rao-68a318583a0ac25a2484d60d"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 uppercase w-full sm:w-[509px] h-[50px] sm:h-[60px] border-4 border-white flex items-center justify-center px-4 transition-all duration-300 hover:scale-105 active:scale-95"
@@ -189,7 +189,7 @@ function Hero() {
               confidence and stay on track.
             </p>
             <a
-              href="https://sachin4803.graphy.com/s/store"
+              href="https://courses.fundedarmy.com/courses/Prop-Firm-Mastery-Program-from-Sachin-Rao-68a318583a0ac25a2484d60d"
               target="_blank"
               rel="noopener noreferrer"
               className="sm:mt-6 lg:mt-0 uppercase w-full sm:w-[380px] xl:w-[509px] h-[22px] sm:h-[50px] border-[4px] border-white flex items-center justify-center px-2"

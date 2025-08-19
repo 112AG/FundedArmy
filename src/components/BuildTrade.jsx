@@ -244,7 +244,7 @@ function BuildTrade() {
             possible.
           </p>
           <a
-            href="https://sachin4803.graphy.com/s/store"
+            href="https://courses.fundedarmy.com/courses/Prop-Firm-Mastery-Program-from-Sachin-Rao-68a318583a0ac25a2484d60d"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 uppercase w-full sm:w-[509px] h-[50px] sm:h-[60px] border-[4px] border-white flex items-center justify-center px-2"

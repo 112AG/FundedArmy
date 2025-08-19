@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 function Header() {
   const itemsRef = useRef();
+  const loginButton2 = useRef();
   const loginButton = useRef();
   const lettersRef = useRef([]);
 
@@ -26,6 +27,14 @@ function Header() {
       { opacity: 0, scale: 0.9, y: 5 },
       { opacity: 1, scale: 1, y: 0, duration: 0.4 }
     );
+
+    tl.fromTo(
+      loginButton2.current,
+      { opacity: 0, scale: 0.9, y: 5 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.4 },
+      "<"
+    );
+
     tl.from(
       lettersRef.current,
       {
@@ -52,37 +61,31 @@ function Header() {
         />
         {/* right menus */}
         <div className="flex items-center justify-center gap-[16px]">
-          <div
-            ref={loginButton}
+          <a
+            ref={loginButton2}
+            href="https://courses.fundedarmy.com/courses/Prop-Firm-Mastery-Program-from-Sachin-Rao-68a318583a0ac25a2484d60d"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[#82e95f] text-center border-[#82e95f] uppercase backdrop-blur-[12.5px] 
   w-[92px] 2xl:w-[128px] h-[38px] 2xl:h-[46px] border-[1px] pt-[8.5px] 2xl:pt-[14px] pb-[8.5px] 
   font-bold text-[16px] cursor-pointer leading-[20px] 
   transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_#82e95f] hover:-translate-y-[2px] active:scale-90"
           >
-            <a
-              href="https://sachin4803.graphy.com/s/store"
-              target="_blank"
-              rel="noopener noreferrer" 
-            >
-              join
-            </a>
-          </div>
+            join
+          </a>
 
-          <div
+          <a
             ref={loginButton}
+            href="https://sachin4803.graphy.com/s/authenticate?url=/t/myprofile"
+            target="_blank"
+            rel="noopener noreferrer"
             className="uppercase backdrop-blur-[12.5px] w-[92px] 2xl:w-[128px] h-[38px] 2xl:h-[46px] border-[1px] 
   pt-[8.5px] 2xl:pt-[14px] pb-[8.5px] px-0 text-[#01030e] text-center cursor-pointer border-white bg-[#82e95f] 
   font-bold text-[16px] leading-[20px] 
   transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_#82e95f] hover:bg-[#6cd94d] hover:-translate-y-[2px] active:scale-90"
           >
-            <a
-              href="https://sachin4803.graphy.com/s/authenticate?url=/t/myprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              login
-            </a>
-          </div>
+            login
+          </a>
 
           {/* <div className="text-white flex item-center gap-[16px] cursor-pointer">
             <img src={menu} alt="Menu Icon" className="w-[28px] h-[28px]" />
