@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import background from "../assets/choicecardsbackground.webp";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +30,6 @@ function ChoiceCard() {
   const subheadingRef = useRef(null);
   const cardsRef = useRef([]);
 
-  // Add card refs dynamically
   cardsRef.current = [];
 
   const addToCardsRefs = (el) => {
@@ -38,9 +38,8 @@ function ChoiceCard() {
     }
   };
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animate headings
+ useGSAP(
+    () => {
       gsap.from(headingRef.current, {
         opacity: 0,
         y: 30,
@@ -48,11 +47,10 @@ function ChoiceCard() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "top 60%",
-          scrub: 2,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
         },
       });
-
       gsap.from(subheadingRef.current, {
         opacity: 0,
         y: 30,
@@ -61,28 +59,28 @@ function ChoiceCard() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: subheadingRef.current,
-          start: "top 60%",
-          scrub: 2,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
         },
       });
-
-      gsap.from(cardsRef.current, {
-        opacity: 0,
-        y: 80,
-        duration: 0.6,
-        ease: "power3.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: "top 60%",
-          end:"top 45%",
-          scrub: 2,
-        },
+      cardsRef.current.forEach((card, i) => {
+        gsap.from(card, {
+          opacity: 0,
+          y: 80,
+          duration: 0.6,
+          ease: "power3.out",
+          delay: i * 0.1,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        });
       });
-    }, containerRef);
+    },
+    { scope: containerRef }
+  );
 
-    return () => ctx.revert();
-  }, []);
 
   return (
     <div

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import logo from "../assets/headerImages/global-trading-academy.svg";
+import logo from "../assets/headerImages/FundedArmy.svg";
 import menu from "../assets/headerImages/globalTradingAcademy-menu.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
