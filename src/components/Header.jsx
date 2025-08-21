@@ -56,7 +56,7 @@ function Header() {
         <img
           src={logo}
           alt="Logo"
-          className="h-[34px] sm:h-[42px] lg:h-[54px] 2xl:h-full"
+          className="h-[32px] sm:h-[42px] lg:h-[54px] 2xl:h-full"
           loading="lazy"
         />
         {/* right menus */}
@@ -67,8 +67,8 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#82e95f] text-center border-[#82e95f] uppercase backdrop-blur-[12.5px] 
-  w-[92px] 2xl:w-[128px] h-[38px] 2xl:h-[46px] border-[1px] pt-[8.5px] 2xl:pt-[14px] pb-[8.5px] 
-  font-bold text-[16px] cursor-pointer leading-[20px] 
+  w-[64px] sm:w-[92px] 2xl:w-[128px] h-[28px] sm:h-[38px] 2xl:h-[46px] border-[1px] pt-[4px] sm:pt-[8.5px] 2xl:pt-[14px] pb-[8.5px] 
+  font-bold text-[12px] sm:text-[16px] cursor-pointer leading-[20px] 
   transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_#82e95f] hover:-translate-y-[2px] active:scale-90"
           >
             join
@@ -79,9 +79,9 @@ function Header() {
             href="https://sachin4803.graphy.com/s/authenticate?url=/t/myprofile"
             target="_blank"
             rel="noopener noreferrer"
-            className="uppercase backdrop-blur-[12.5px] w-[92px] 2xl:w-[128px] h-[38px] 2xl:h-[46px] border-[1px] 
-  pt-[8.5px] 2xl:pt-[14px] pb-[8.5px] px-0 text-[#01030e] text-center cursor-pointer border-white bg-[#82e95f] 
-  font-bold text-[16px] leading-[20px] 
+            className="uppercase backdrop-blur-[12.5px] w-[64px] sm:w-[92px] 2xl:w-[128px] h-[28px] sm:h-[38px] 2xl:h-[46px] border-[1px] 
+  pt-[4px] sm:pt-[8.5px] 2xl:pt-[14px] pb-[8.5px] px-0 text-[#01030e] text-center cursor-pointer border-white bg-[#82e95f] 
+  font-bold text-[12px] sm:text-[16px] leading-[20px] 
   transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_#82e95f] hover:bg-[#6cd94d] hover:-translate-y-[2px] active:scale-90"
           >
             login
