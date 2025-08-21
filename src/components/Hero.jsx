@@ -32,32 +32,32 @@ function Hero() {
     );
     const tl = gsap.timeline();
 
-    tl.from(textRef.current, {
-      opacity: 0,
-      y: -80,
-      duration: 0.6,
-      scrollTrigger: {
-        scrub: 2,
-        trigger: textRef.current,
-        start: "top 65%",
-        end: "top 50%",
-        marker: false,
-      },
-    });
+    // tl.from(textRef.current, {
+    //   opacity: 0,
+    //   y: -80,
+    //   duration: 0.6,
+    //   scrollTrigger: {
+    //     scrub: 2,
+    //     trigger: textRef.current,
+    //     start: "top 65%",
+    //     end: "top 50%",
+    //     marker: false,
+    //   },
+    // });
 
-    tl.from(buttonRef.current, {
-      opacity: 0,
-      scale: 0.8,
-      y: 20,
-      duration: 0.6,
-      scrollTrigger: {
-        scrub: 2,
-        trigger: buttonRef.current,
-        start: "top 65%",
-        end: "top 50%",
-        marker: false,
-      },
-    });
+    // tl.from(buttonRef.current, {
+    //   opacity: 0,
+    //   scale: 0.8,
+    //   y: 20,
+    //   duration: 0.6,
+    //   scrollTrigger: {
+    //     scrub: 2,
+    //     trigger: buttonRef.current,
+    //     start: "top 65%",
+    //     end: "top 50%",
+    //     marker: false,
+    //   },
+    // });
   }, []);
 
   return (

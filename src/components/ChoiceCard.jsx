@@ -30,6 +30,7 @@ function ChoiceCard() {
   const subheadingRef = useRef(null);
   const cardsRef = useRef([]);
 
+  // Add card refs dynamically
   cardsRef.current = [];
 
   const addToCardsRefs = (el) => {
@@ -40,6 +41,7 @@ function ChoiceCard() {
 
  useGSAP(
     () => {
+      // Heading
       gsap.from(headingRef.current, {
         opacity: 0,
         y: 30,
@@ -51,6 +53,8 @@ function ChoiceCard() {
           toggleActions: "play none none reverse",
         },
       });
+
+      // Subheading
       gsap.from(subheadingRef.current, {
         opacity: 0,
         y: 30,
@@ -63,6 +67,8 @@ function ChoiceCard() {
           toggleActions: "play none none reverse",
         },
       });
+
+      // Cards
       cardsRef.current.forEach((card, i) => {
         gsap.from(card, {
           opacity: 0,
@@ -78,7 +84,7 @@ function ChoiceCard() {
         });
       });
     },
-    { scope: containerRef }
+    { scope: containerRef } // ✅ GSAP cleans up automatically on unmount
   );
 
 
@@ -237,7 +243,7 @@ function ChoiceCard() {
               href="https://courses.fundedarmy.com/courses/Prop-Firm-Mastery-Program-from-Sachin-Rao-68a318583a0ac25a2484d60d"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 sm:mt-6 uppercase cursor-pointer w-full max-w-[509px] xl:w-[509px] h-auto min-h-[50px] xl:h-[66px] bg-[#00ff004f] border-[4px] border-white flex items-center justify-center px-4 py-3 xl:px-0 xl:py-0"
+              className="mt-4 sm:mt-6 uppercase cursor-pointer w-full max-w-[378px] xl:w-[378px] h-auto min-h-[50px] xl:h-[66px] bg-[#00ff004f] border-[4px] border-white flex items-center justify-center px-4 py-3 xl:px-0 xl:py-0"
             >
               <h2 className="font-[600] text-[16px] sm:text-[20px] xl:text-[22px] 2xl:text-[28px] leading-[22px] sm:leading-[24px] xl:leading-[28px] text-white text-center">
                 join funded army

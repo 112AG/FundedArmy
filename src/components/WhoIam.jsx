@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import owner from "../assets/SachinRaw.webp";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,17 +10,14 @@ function WhoIam() {
   const containerRef = useRef(null);
   const headingRef = useRef(null);
 
-  // For mobile elements
   const mobileImageRef = useRef(null);
   const mobileTextRef = useRef(null);
 
-  // For desktop elements
   const desktopImageRef = useRef(null);
   const desktopTextRef = useRef(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Heading animation
+ useGSAP(
+    () => {
       gsap.from(headingRef.current, {
         opacity: 0,
         y: 30,
@@ -29,14 +27,13 @@ function WhoIam() {
           trigger: headingRef.current,
           start: "top 80%",
           end: "top 60%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
         },
       });
 
-      // Mobile animations (for screens < 2xl)
-      const mobileQuery = gsap.matchMedia();
-      
-      mobileQuery.add("(max-width: 1535px)", () => {
+      const mm = gsap.matchMedia();
+
+      mm.add("(max-width: 1535px)", () => {
         gsap.from(mobileImageRef.current, {
           opacity: 0,
           y: 40,
@@ -46,7 +43,7 @@ function WhoIam() {
             trigger: mobileImageRef.current,
             start: "top 80%",
             end: "top 60%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
         });
 
@@ -60,13 +57,12 @@ function WhoIam() {
             trigger: mobileTextRef.current,
             start: "top 80%",
             end: "top 60%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
         });
       });
 
-      // Desktop animations (for screens >= 2xl)
-      mobileQuery.add("(min-width: 1536px)", () => {
+      mm.add("(min-width: 1536px)", () => {
         gsap.from([desktopImageRef.current, desktopTextRef.current], {
           opacity: 0,
           y: 40,
@@ -77,14 +73,13 @@ function WhoIam() {
             trigger: containerRef.current,
             start: "top 70%",
             end: "top 50%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
         });
       });
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
+    },
+    { scope: containerRef }
+  );
 
   return ( 
     <div

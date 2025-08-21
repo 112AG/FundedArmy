@@ -35,17 +35,17 @@ function Header() {
       "<"
     );
 
-    tl.from(
-      lettersRef.current,
-      {
-        x: 40,
-        opacity: 0,
-        ease: "power3.out",
-        duration: 0.6,
-        stagger: 0.1,
-      },
-      "<"
-    );
+    // tl.from(
+    //   lettersRef.current,
+    //   {
+    //     x: 40,
+    //     opacity: 0,
+    //     ease: "power3.out",
+    //     duration: 0.6,
+    //     stagger: 0.1,
+    //   },
+    //   "<"
+    // );
   });
   const text = "MENU";
 
