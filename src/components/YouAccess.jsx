@@ -169,55 +169,57 @@ function YouAccess() {
     }
   };
 
-  useGSAP(() => {
-    // Headings animation
+ useGSAP(() => {
+    // Headings
     gsap.from([textRef.current, textRefTwo.current], {
       opacity: 0,
       y: -40,
-      duration: 0.6,
+      duration: 0.8,
       stagger: 0.2,
+      ease: "power3.out",
       scrollTrigger: {
         trigger: textRef.current,
         start: "top 80%",
-        end: "top 75%",
         toggleActions: "play none none reverse",
+        scrub: true, // smoother
       },
     });
 
-    // Batch animate sections
-    gsap.utils.toArray(sectionsRef.current).forEach((section) => {
+    // Sections
+    sectionsRef.current.forEach((section) => {
       gsap.from(section, {
         opacity: 0,
         y: 50,
-        scale: 0.98,
-        duration: 0.8,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: section,
-        start: "top 80%",
-        end: "top 75%",
+          start: "top 85%",
           toggleActions: "play none none reverse",
+          scrub: true,
         },
       });
     });
 
-    // CTA animation
+    // CTA
     gsap.from(ctaRef.current, {
       opacity: 0,
-      y: 50,
-      scale: 0.98,
-      duration: 0.8,
+      y: 60,
+      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ctaRef.current,
-        start: "top 80%",
-        end: "top 75%",
+        start: "top 85%",
         toggleActions: "play none none reverse",
+        scrub: true,
       },
     });
 
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
   }, []);
+
 
   return (
     <div className="h-full font-inter py-12 px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
@@ -263,7 +265,7 @@ function YouAccess() {
                 {section.points.map((point, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-2 sm:gap-3 w-full py-2 sm:py-3 px-4 sm:px-5 rounded-full bg-[#ffffff11]"
+                    className="flex items-center gap-2 sm:gap-3 w-full py-2 sm:py-3 px-4 sm:px-5 rounded-full bg-[#ffffff11]"
                   >
                     <div className="">
                       <CheckIcon />
