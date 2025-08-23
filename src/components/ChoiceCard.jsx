@@ -24,14 +24,10 @@ function ChoiceCard() {
     "Custom-made learning",
   ];
 
-  // Refs
-  const containerRef = useRef(null);
+   const containerRef = useRef(null);
   const headingRef = useRef(null);
   const subheadingRef = useRef(null);
   const cardsRef = useRef([]);
-
-  // Add card refs dynamically
-  cardsRef.current = [];
 
   const addToCardsRefs = (el) => {
     if (el && !cardsRef.current.includes(el)) {
@@ -39,8 +35,11 @@ function ChoiceCard() {
     }
   };
 
- useGSAP(
+  useGSAP(
     () => {
+      // ✅ Kill old triggers before creating new ones
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+
       // Heading
       gsap.from(headingRef.current, {
         opacity: 0,
@@ -69,7 +68,7 @@ function ChoiceCard() {
       });
 
       // Cards
-      cardsRef.current.forEach((card, i) => {
+      gsap.utils.toArray(cardsRef.current).forEach((card, i) => {
         gsap.from(card, {
           opacity: 0,
           y: 80,
@@ -83,8 +82,11 @@ function ChoiceCard() {
           },
         });
       });
+
+      // ✅ Refresh triggers after everything is in place
+      ScrollTrigger.refresh();
     },
-    { scope: containerRef } // ✅ GSAP cleans up automatically on unmount
+    { scope: containerRef }
   );
 
 

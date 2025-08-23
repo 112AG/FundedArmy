@@ -169,56 +169,54 @@ function YouAccess() {
     }
   };
 
- useGSAP(() => {
-    // Headings
-    gsap.from([textRef.current, textRefTwo.current], {
-      opacity: 0,
-      y: -40,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: textRef.current,
-        start: "top 80%",
-        toggleActions: "play none none reverse",
-        scrub: true, // smoother
-      },
-    });
+useGSAP(() => {
+  // Headings
+  gsap.from([textRef.current, textRefTwo.current], {
+    opacity: 0,
+    y: -40,
+    ease: "power3.out",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: textRef.current,
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+    },
+  });
 
-    // Sections
-    sectionsRef.current.forEach((section) => {
-      gsap.from(section, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-          scrub: true,
-        },
-      });
-    });
-
-    // CTA
-    gsap.from(ctaRef.current, {
+  // Sections
+  sectionsRef.current.forEach((section) => {
+    gsap.from(section, {
       opacity: 0,
-      y: 60,
-      duration: 1,
+      y: 50,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: ctaRef.current,
+        trigger: section,
         start: "top 85%",
-        toggleActions: "play none none reverse",
-        scrub: true,
+        end: "top 60%",
+        scrub: 1,
       },
     });
+  });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
+  // CTA
+  gsap.from(ctaRef.current, {
+    opacity: 0,
+    y: 60,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ctaRef.current,
+      start: "top 85%",
+      end: "top 60%",
+      scrub: 1,
+    },
+  });
+
+  return () => {
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+  };
+}, []);
+
 
 
   return (

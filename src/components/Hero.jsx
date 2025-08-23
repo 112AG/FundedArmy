@@ -7,6 +7,10 @@ import HeroCards from "./HeroCards";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Header from "./Header";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 function Hero() {
   const heroRef = useRef();
@@ -19,45 +23,50 @@ function Hero() {
       heroRef.current,
       {
         opacity: 0,
-        scale: 0.8,
-        y: -5,
+        scale: 0.9,
+        y: 20,
       },
       {
         opacity: 1,
         scale: 1,
-        y: 5,
-        duration: 0.6,
-        delay: 0.6,
+        y: 0, // <-- keep at 0 so no conflict
+        duration: 0.8,
+        delay: 0.4,
+        ease: "power3.out",
       }
     );
-    const tl = gsap.timeline();
 
-    // tl.from(textRef.current, {
+    // Scroll animations (if you want them active again)
+    // Text
+    // gsap.from(textRef.current, {
     //   opacity: 0,
-    //   y: -80,
-    //   duration: 0.6,
+    //   y: 60,
+    //   duration: 0.8,
+    //   ease: "power2.out",
     //   scrollTrigger: {
-    //     scrub: 2,
     //     trigger: textRef.current,
-    //     start: "top 65%",
-    //     end: "top 50%",
-    //     marker: false,
+    //     start: "top 80%",
+    //     end: "top 60%",
+    //     scrub: 1, // smoother
     //   },
     // });
 
-    // tl.from(buttonRef.current, {
+    // Button
+    // gsap.from(buttonRef.current, {
     //   opacity: 0,
-    //   scale: 0.8,
-    //   y: 20,
-    //   duration: 0.6,
+    //   scale: 0.9,
+    //   y: 30,
+    //   duration: 0.8,
+    //   ease: "power2.out",
     //   scrollTrigger: {
-    //     scrub: 2,
     //     trigger: buttonRef.current,
-    //     start: "top 65%",
-    //     end: "top 50%",
-    //     marker: false,
+    //     start: "top 80%",
+    //     end: "top 60%",
+    //     scrub: 1,
     //   },
     // });
+    // Cleanup on unmount
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
   return (
@@ -72,7 +81,7 @@ function Hero() {
               <span>FOLLOWS SKILL</span>
               <br className="block" /> &nbsp;
               <span className="font-[500]">
-                AND WE BUILD THAT <span className="text-[#9DF280]">SKILL</span>{" "} 
+                AND WE BUILD THAT <span className="text-[#9DF280]">SKILL</span>{" "}
                 <br className="hidden sm:block lg:block" />
                 FROM <span className="text-[#9DF280]">DAY</span> ONE.
               </span>
@@ -178,7 +187,7 @@ function Hero() {
               <span>FOLLOWS SKILL</span>
               <br className="hidden lg:block" />
               <span className="font-[500]">
-                AND WE BUILD THAT <span className="text-[#9DF280]">SKILL</span>{" "} 
+                AND WE BUILD THAT <span className="text-[#9DF280]">SKILL</span>{" "}
                 <br className="hidden sm:block lg:block" />
                 FROM <span className="text-[#9DF280]">DAY</span> ONE.
               </span>

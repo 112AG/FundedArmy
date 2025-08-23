@@ -9,7 +9,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 function Achievement() {
-  // Memoize certificates array for performance.
   const certificates = useMemo(
     () => [
       certificate1,
