@@ -14,71 +14,68 @@ function BuildTrade() {
   const heroRef = useRef();
 
   useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from(textRef.current, {
+    gsap.from(textRef.current, {
       opacity: 0,
       y: -40,
-      duration: 0.6,
       scrollTrigger: {
-        scrub: 2,
+        // scrub: 2,
         trigger: textRef.current,
-        start: "top 70%",
+        start: "top 85%",
         end: "top 65%",
         marker: false,
       },
     });
-    tl.from(textRefTwo.current, {
+    gsap.from(textRefTwo.current, {
       opacity: 0,
       y: -40,
-      duration: 0.6,
       scrollTrigger: {
-        scrub: 2,
+        // scrub: 2,
         trigger: textRefTwo.current,
-        start: "top 70%",
+        start: "top 85%",
         end: "top 65%",
         marker: false,
       },
     });
 
-    tl.from(textRefThree.current, {
+    gsap.from(textRefThree.current, {
       opacity: 0,
       y: -40,
-      duration: 0.6,
       scrollTrigger: {
-        scrub: 2,
+        // scrub: 2,
         trigger: textRefTwo.current,
-        start: "top 70%",
+        start: "top 85%",
         end: "top 65%",
         marker: false,
       },
     });
-    tl.from(cardsRef.current, {
+    gsap.from(cardsRef.current, {
       opacity: 0,
       y: -80,
       scale: 0.95,
-      duration: 0.6,
       stagger: 0.5,
       scrollTrigger: {
-        scrub: 1,
+        // scrub: 1,
         trigger: cardsContainerRef.current,
-        start: "top 70%",
-        end: "top 65%",
+        start: "top 60%",
+        end: "top 30%",
         marker: false,
       },
     });
-    tl.from(heroRef.current, {
+    gsap.from(heroRef.current, {
       opacity: 0,
       scale: 0.6,
       y: -5,
       scrollTrigger: {
-        scrub: 1,
+        // scrub: 1,
         trigger: heroRef.current,
-        start: "top 70%",
-        end: "top 60%",
+        start: "top 75%",
+        end: "top 50%",
         marker: false,
       },
     });
-  }, []);
+  });
+
+  // useGSAP(() => {});
   return (
     <div className="pt-[80px] sm:pt-[186px] pb-[100px] sm:pb-[216px] font-inter z-50 px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
       <div
@@ -104,8 +101,8 @@ function BuildTrade() {
         ref={textRefThree}
         className="w-full hidden sm:block 2xl:w-[1237px] mx-auto 2xl:h-[181px] text-[16px] sm:text-[20px] text-center leading-[22px] sm:leading-[27px] text-white"
       >
-        At Funded Army, we do things differently. Led by Sachin Rao
-        an experienced trader with years in live markets we offer more than just
+        At Funded Army, we do things differently. Led by Sachin Rao an
+        experienced trader with years in live markets we offer more than just
         lessons. You get personal mentorship, clear rules, and a community built
         for real results.
         <br />
@@ -115,84 +112,100 @@ function BuildTrade() {
         protect your capital, and trade with confidence whether you're managing
         funded accounts or growing your swing trading portfolio.
       </p>
-<div
-  ref={cardsContainerRef}
-  className="hidden sm:flex flex-col sm:flex-row flex-wrap items-center justify-center gap-[12px] sm:gap-[24px] pt-[20px] sm:pt-[40px]"
->
-  {/* one */}
-  <div
-    ref={(el) => (cardsRef.current[0] = el)}
-    className="card-trade flex 
+      <div
+        ref={cardsContainerRef}
+        className="hidden sm:flex flex-col sm:flex-row flex-wrap items-center justify-center gap-[12px] sm:gap-[24px] pt-[20px] sm:pt-[40px]"
+      >
+        {/* one */}
+        <div
+          ref={(el) => (cardsRef.current[0] = el)}
+          className="card-trade flex 
       w-[220px] sm:w-[360px] lg:w-[380px] xl:w-[400px] 2xl:w-[413px]
       h-[56px] sm:h-[70px] lg:h-[76px] xl:h-[78px] 2xl:h-[80px]
       py-[8px] sm:py-[14px] lg:py-[15px] 2xl:py-[16px]
       px-[10px] sm:px-[20px] lg:px-[22px] xl:px-[24px] 2xl:px-[26px]
       flexcol justify-center items-center gap-[24px]"
-    style={{
-      background:
-        "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
-      boxShadow: "0 4px 50px 0 rgba(92, 239, 0, 0.24)",
-      backdropFilter: "blur(12.5px)",
-    }}
-  >
-    <img src={guidance} alt="image" className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto" />
-    <p className="text-white text-center 
+          style={{
+            background:
+              "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
+            boxShadow: "0 4px 50px 0 rgba(92, 239, 0, 0.24)",
+            backdropFilter: "blur(12.5px)",
+          }}
+        >
+          <img
+            src={guidance}
+            alt="image"
+            className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto"
+          />
+          <p
+            className="text-white text-center 
       text-[16px] sm:text-[20px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]
-      font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]">
-      Real guidance
-    </p>
-  </div>
+      font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]"
+          >
+            Real guidance
+          </p>
+        </div>
 
-  {/* two */}
-  <div
-    ref={(el) => (cardsRef.current[1] = el)}
-    className="card-trade flex 
+        {/* two */}
+        <div
+          ref={(el) => (cardsRef.current[1] = el)}
+          className="card-trade flex 
       w-[220px] sm:w-[360px] lg:w-[380px] xl:w-[400px] 2xl:w-[413px]
       h-[56px] sm:h-[70px] lg:h-[76px] xl:h-[78px] 2xl:h-[80px]
       py-[8px] sm:py-[14px] lg:py-[15px] 2xl:py-[16px]
       px-[10px] sm:px-[20px] lg:px-[22px] xl:px-[24px] 2xl:px-[26px]
       flexcol justify-center items-center gap-[24px]"
-    style={{
-      background:
-        "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
-      boxShadow: "0 4px 50px 0 rgba(92, 239, 0, 0.24)",
-      backdropFilter: "blur(12.5px)",
-    }}
-  >
-    <img src={learning} alt="image" className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto" />
-    <p className="text-white text-center 
+          style={{
+            background:
+              "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
+            boxShadow: "0 4px 50px 0 rgba(92, 239, 0, 0.24)",
+            backdropFilter: "blur(12.5px)",
+          }}
+        >
+          <img
+            src={learning}
+            alt="image"
+            className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto"
+          />
+          <p
+            className="text-white text-center 
       text-[16px] sm:text-[20px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]
-      font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]">
-      Practical systems
-    </p>
-  </div>
+      font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]"
+          >
+            Practical systems
+          </p>
+        </div>
 
-  {/* three */}
-  <div
-    ref={(el) => (cardsRef.current[3] = el)}
-    className="card-trade flex 
+        {/* three */}
+        <div
+          ref={(el) => (cardsRef.current[3] = el)}
+          className="card-trade flex 
       w-[220px] sm:w-[360px] lg:w-[380px] xl:w-[400px] 2xl:w-[413px]
       h-[56px] sm:h-[70px] lg:h-[76px] xl:h-[78px] 2xl:h-[80px]
       py-[8px] sm:py-[14px] lg:py-[15px] 2xl:py-[16px]
       px-[10px] sm:px-[20px] lg:px-[22px] xl:px-[24px] 2xl:px-[26px]
       flexcol justify-center items-center gap-[24px]"
-    style={{
-      background:
-        "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
-      boxShadow: "0 4px 50px 0 rgba(92, 239, 0, 0.24)",
-      backdropFilter: "blur(12.5px)",
-    }}
-  >
-    <img src={vector} alt="image" className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto" />
-    <p className="text-white text-center 
+          style={{
+            background:
+              "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
+            boxShadow: "0 4px 50px 0 rgba(92, 239, 0, 0.24)",
+            backdropFilter: "blur(12.5px)",
+          }}
+        >
+          <img
+            src={vector}
+            alt="image"
+            className="w-auto h-[24px] sm:h-[26px] lg:h-[28px] xl:h-auto"
+          />
+          <p
+            className="text-white text-center 
       text-[16px] sm:text-[20px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]
-      font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]">
-      Personal feedback
-    </p>
-  </div>
-</div>
-
-
+      font-[700] leading-[18px] sm:leading-[22px] lg:leading-[24px] xl:leading-[26px] 2xl:leading-[27px]"
+          >
+            Personal feedback
+          </p>
+        </div>
+      </div>
       <div
         ref={heroRef}
         className="flex items-start flex-col-reverse xl:flex-row justify-between pt-[50px] sm:pt-[80px] gap-8 xl:gap-0"
@@ -207,7 +220,7 @@ function BuildTrade() {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               color: "transparent",
-              paddingBottom: "4px"
+              paddingBottom: "4px",
             }}
           >
             30 days is all you need

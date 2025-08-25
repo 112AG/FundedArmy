@@ -35,59 +35,58 @@ function ChoiceCard() {
     }
   };
 
-  useGSAP(
-    () => {
-      // ✅ Kill old triggers before creating new ones
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+  // useGSAP(
+  //   () => {
+  //     ScrollTrigger.getAll().forEach((t) => t.kill());
 
-      // Heading
-      gsap.from(headingRef.current, {
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: headingRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      });
+  //     // Heading
+  //     gsap.from(headingRef.current, {
+  //       opacity: 0,
+  //       y: 30,
+  //       duration: 0.6,
+  //       ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: headingRef.current,
+  //         start: "top 80%",
+  //         toggleActions: "play none none reverse",
+  //       },
+  //     });
 
-      // Subheading
-      gsap.from(subheadingRef.current, {
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
-        delay: 0.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: subheadingRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      });
+  //     // Subheading
+  //     gsap.from(subheadingRef.current, {
+  //       opacity: 0,
+  //       y: 30,
+  //       duration: 0.6,
+  //       delay: 0.1,
+  //       ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: subheadingRef.current,
+  //         start: "top 80%",
+  //         toggleActions: "play none none reverse",
+  //       },
+  //     });
 
-      // Cards
-      gsap.utils.toArray(cardsRef.current).forEach((card, i) => {
-        gsap.from(card, {
-          opacity: 0,
-          y: 80,
-          duration: 0.6,
-          ease: "power3.out",
-          delay: i * 0.1,
-          scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
+  //     // Cards
+  //     gsap.utils.toArray(cardsRef.current).forEach((card, i) => {
+  //       gsap.from(card, {
+  //         opacity: 0,
+  //         y: 80,
+  //         duration: 0.6,
+  //         ease: "power3.out",
+  //         delay: i * 0.1,
+  //         scrollTrigger: {
+  //           trigger: card,
+  //           start: "top 85%",
+  //           toggleActions: "play none none reverse",
+  //         },
+  //       });
+  //     });
 
-      // ✅ Refresh triggers after everything is in place
-      ScrollTrigger.refresh();
-    },
-    { scope: containerRef }
-  );
+  //     // ✅ Refresh triggers after everything is in place
+  //     ScrollTrigger.refresh();
+  //   },
+  //   { scope: containerRef }
+  // );
 
 
   return (

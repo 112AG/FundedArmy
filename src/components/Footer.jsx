@@ -15,32 +15,32 @@ const gradientStyle = {
 const Footer = memo(() => {
   const footerRef = useRef(null);
 
-  useEffect(() => {
-    const footer = footerRef.current;
+  // useEffect(() => {
+  //   const footer = footerRef.current;
 
-    if (!footer) return;
+  //   if (!footer) return;
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        footer,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: footer,
-            start: "top 60%",
-            end: "top 46%",
-            scrub: 2,
-          },
-        }
-      );
-    }, footer);
+  //   const ctx = gsap.context(() => {
+  //     gsap.fromTo(
+  //       footer,
+  //       { opacity: 0, y: 50 },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         duration: 1,
+  //         ease: "power3.out",
+  //         scrollTrigger: {
+  //           trigger: footer,
+  //           start: "top 60%",
+  //           end: "top 46%",
+  //           scrub: 2,
+  //         },
+  //       }
+  //     );
+  //   }, footer);
 
-    return () => ctx.revert(); // Clean up on unmount
-  }, []);
+  //   return () => ctx.revert(); // Clean up on unmount
+  // }, []);
 
   return (
     <div

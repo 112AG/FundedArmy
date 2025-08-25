@@ -9,43 +9,60 @@ function Header() {
   const loginButton = useRef();
   const lettersRef = useRef([]);
 
+  // useGSAP(() => {
+  //   const tl = gsap.timeline();
+  //   tl.from(
+  //     itemsRef.current,
+  //     {
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 0.6,
+  //       delay: 0.4,
+  //     },
+  //     "<"
+  //   );
+
+  //   tl.fromTo(
+  //     loginButton.current,
+  //     { opacity: 0, scale: 0.9, y: 5 },
+  //     { opacity: 1, scale: 1, y: 0, duration: 0.4 }
+  //   );
+
+  //   tl.fromTo(
+  //     loginButton2.current,
+  //     { opacity: 0, scale: 0.9, y: 5 },
+  //     { opacity: 1, scale: 1, y: 0, duration: 0.4 },
+  //     "<"
+  //   );
+
+  //   // tl.from(
+  //   //   lettersRef.current,
+  //   //   {
+  //   //     x: 40,
+  //   //     opacity: 0,
+  //   //     ease: "power3.out",
+  //   //     duration: 0.6,
+  //   //     stagger: 0.1,
+  //   //   },
+  //   //   "<"
+  //   // );
+  // });
+
   useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from(
-      itemsRef.current,
-      {
-        y: 50,
-        opacity: 0,
-        duration: 0.6,
-        delay: 0.4,
-      },
-      "<"
-    );
-
-    tl.fromTo(
-      loginButton.current,
-      { opacity: 0, scale: 0.9, y: 5 },
-      { opacity: 1, scale: 1, y: 0, duration: 0.4 }
-    );
-
-    tl.fromTo(
-      loginButton2.current,
-      { opacity: 0, scale: 0.9, y: 5 },
-      { opacity: 1, scale: 1, y: 0, duration: 0.4 },
-      "<"
-    );
-
-    // tl.from(
-    //   lettersRef.current,
-    //   {
-    //     x: 40,
-    //     opacity: 0,
-    //     ease: "power3.out",
-    //     duration: 0.6,
-    //     stagger: 0.1,
-    //   },
-    //   "<"
-    // );
+    let tl = gsap.timeline();
+    gsap.from(itemsRef.current, {
+      opacity: 0,
+      y: 80,
+      duration: 0.6,
+      delay: 0.4,
+    });
+    // tl.from(lettersRef.current, {
+    //   x: 40,
+    //   opacity: 0,
+    //   ease: "power3.out",
+    //   duration: 0.6,
+    //   stagger: 0.1,
+    // });
   });
   const text = "MENU";
 

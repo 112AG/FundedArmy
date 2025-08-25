@@ -16,71 +16,71 @@ function WhoIam() {
   const desktopImageRef = useRef(null);
   const desktopTextRef = useRef(null);
 
-useGSAP(
-  () => {
-    gsap.from(headingRef.current, {
-      opacity: 0,
-      y: 30,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: headingRef.current,
-        start: "top 80%",
-        end: "top 60%",
-        toggleActions: "play none none reverse",
-      },
-    });
+// useGSAP(
+//   () => {
+//     gsap.from(headingRef.current, {
+//       opacity: 0,
+//       y: 30,
+//       duration: 1,
+//       ease: "power3.out",
+//       scrollTrigger: {
+//         trigger: headingRef.current,
+//         start: "top 80%",
+//         end: "top 60%",
+//         toggleActions: "play none none reverse",
+//       },
+//     });
 
-    const mm = gsap.matchMedia();
+//     const mm = gsap.matchMedia();
 
-    mm.add("(max-width: 1535px)", () => {
-      gsap.from(mobileImageRef.current, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: mobileImageRef.current,
-          start: "top 80%",
-          end: "top 60%",
-          toggleActions: "play none none reverse",
-        },
-      });
+//     mm.add("(max-width: 1535px)", () => {
+//       gsap.from(mobileImageRef.current, {
+//         opacity: 0,
+//         y: 40,
+//         duration: 0.8,
+//         ease: "power3.out",
+//         scrollTrigger: {
+//           trigger: mobileImageRef.current,
+//           start: "top 80%",
+//           end: "top 60%",
+//           toggleActions: "play none none reverse",
+//         },
+//       });
 
-      gsap.from(mobileTextRef.current, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        delay: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: mobileTextRef.current,
-          start: "top 80%",
-          end: "top 60%",
-          toggleActions: "play none none reverse",
-        },
-      });
-    });
+//       gsap.from(mobileTextRef.current, {
+//         opacity: 0,
+//         y: 40,
+//         duration: 0.8,
+//         delay: 0.2,
+//         ease: "power3.out",
+//         scrollTrigger: {
+//           trigger: mobileTextRef.current,
+//           start: "top 80%",
+//           end: "top 60%",
+//           toggleActions: "play none none reverse",
+//         },
+//       });
+//     });
 
-    // ✅ Desktop
-    mm.add("(min-width: 1536px)", () => {
-      gsap.from([desktopImageRef.current, desktopTextRef.current], {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: desktopImageRef.current, // 👈 better than container
-          start: "top 75%",
-          end: "top 55%",
-          toggleActions: "play none none reverse",
-        },
-      });
-    });
-  },
-  { scope: containerRef } // ✅ GSAP cleans up automatically
-);
+//     // ✅ Desktop
+//     mm.add("(min-width: 1536px)", () => {
+//       gsap.from([desktopImageRef.current, desktopTextRef.current], {
+//         opacity: 0,
+//         y: 40,
+//         duration: 0.8,
+//         ease: "power3.out",
+//         stagger: 0.1,
+//         scrollTrigger: {
+//           trigger: desktopImageRef.current, // 👈 better than container
+//           start: "top 75%",
+//           end: "top 55%",
+//           toggleActions: "play none none reverse",
+//         },
+//       });
+//     });
+//   },
+//   { scope: containerRef } // ✅ GSAP cleans up automatically
+// );
 
 
   return ( 

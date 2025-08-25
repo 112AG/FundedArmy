@@ -169,55 +169,53 @@ function YouAccess() {
     }
   };
 
-useGSAP(() => {
-  // Headings
-  gsap.from([textRef.current, textRefTwo.current], {
-    opacity: 0,
-    y: -40,
-    ease: "power3.out",
-    stagger: 0.2,
-    scrollTrigger: {
-      trigger: textRef.current,
-      start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
-    },
-  });
-
-  // Sections
-  sectionsRef.current.forEach((section) => {
-    gsap.from(section, {
+  useGSAP(() => {
+    // Headings
+    gsap.from([textRef.current, textRefTwo.current], {
       opacity: 0,
-      y: 50,
-      ease: "power2.out",
+      y: -40,
+      ease: "power3.out",
+      stagger: 0.2,
       scrollTrigger: {
-        trigger: section,
+        trigger: textRef.current,
         start: "top 85%",
-        end: "top 60%",
-        scrub: 1,
+        end: "top 65%",
+        // scrub: 1,
       },
     });
-  });
 
-  // CTA
-  gsap.from(ctaRef.current, {
-    opacity: 0,
-    y: 60,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ctaRef.current,
-      start: "top 85%",
-      end: "top 60%",
-      scrub: 1,
-    },
-  });
+    // Sections
+    sectionsRef.current.forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+          end: "top 65%",
+          // scrub: 1,
+        },
+      });
+    });
 
-  return () => {
-    ScrollTrigger.getAll().forEach((t) => t.kill());
-  };
-}, []);
+    // CTA
+    gsap.from(ctaRef.current, {
+      opacity: 0,
+      y: 60,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ctaRef.current,
+        start: "top 85%",
+        end: "top 65%",
+        // scrub: 1,
+      },
+    });
 
-
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
 
   return (
     <div className="h-full font-inter py-12 px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">

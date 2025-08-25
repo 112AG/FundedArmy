@@ -26,48 +26,85 @@ function Achievement() {
   const cardsContainerRef = useRef();
 
   useGSAP(() => {
-    const tl = gsap.timeline();
-
-    tl.from(textRef.current, {
-      opacity: 0,
-      y: -40,
-      duration: 0.6,
+    gsap.from(textRef.current, {
+      y:40,
+      opacity:0, 
+      duration:0.6,
+      delay:0.4,
       scrollTrigger: {
-        scrub: 2,
         trigger: textRef.current,
-        start: "top 65%",
-        end: "top 60%",
-        marker: false,
-      },
-    });
+        start: "top 85%",
+        end: "top 65%",
+        // markers: true,
+      }
+    })
 
-    tl.from(textRefTwo.current, {
-      opacity: 0,
-      y: -40,
-      duration: 0.6,
+    gsap.from(textRefTwo.current, {
+      y:40,
+      opacity:0, 
+      duration:0.6,
+      delay:0.4,
       scrollTrigger: {
-        scrub: 2,
         trigger: textRefTwo.current,
-        start: "top 65%",
-        end: "top 60%",
-        marker: false,
-      },
-    });
+        start: "top 85%",
+        end: "top 65%",
+        // markers: true,
+      }
+    })
 
-    tl.from(cardsContainerRef.current.querySelectorAll(".card"), {
-      opacity: 0,
-      y: -120,
-      duration: 0.6,
-      stagger: 0.1,
-      scrollTrigger: {
-        scrub: 1,
-        trigger: cardsContainerRef.current,
-        start: "top 60%",
-        end: "top 25%",
-        marker: false,
-      },
-    });
-  }, []);
+    gsap.from(cardsContainerRef.current.querySelectorAll(".card"), {
+       y: 120,
+       opacity:0,
+       duration: 0.6,
+       stagger: 0.1,
+       scrollTrigger: {
+         trigger: ".card",
+        start: "top 85%",
+        end: "top 65%",
+       },
+     });
+  })
+
+  // useGSAP(() => {
+  //   const tl = gsap.timeline();
+
+  //   tl.from(textRef.current, {
+  //     y: -40,
+  //     duration: 0.6,
+  //     scrollTrigger: {
+  //       scrub: 2,
+  //       trigger: textRef.current,
+  //       start: "top 65%",
+  //       end: "top 60%",
+  //       marker: false,
+  //     },
+  //   });
+
+  //   tl.from(textRefTwo.current, {
+  //     y: -40,
+  //     duration: 0.6,
+  //     scrollTrigger: {
+  //       scrub: 2,
+  //       trigger: textRefTwo.current,
+  //       start: "top 65%",
+  //       end: "top 60%",
+  //       marker: false,
+  //     },
+  //   });
+
+  //   tl.from(cardsContainerRef.current.querySelectorAll(".card"), {
+  //     y: -120,
+  //     duration: 0.6,
+  //     stagger: 0.1,
+  //     scrollTrigger: {
+  //       scrub: 1,
+  //       trigger: cardsContainerRef.current,
+  //       start: "top 60%",
+  //       end: "top 25%",
+  //       marker: false,
+  //     },
+  //   });
+  // }, []);
 
   return (
     <div className="sm:pt-[164px] lg:pt-0 pt-2 px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">

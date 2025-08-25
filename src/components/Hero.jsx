@@ -17,58 +17,64 @@ function Hero() {
   const textRef = useRef();
   const buttonRef = useRef();
 
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     heroRef.current,
+  //     {
+  //       opacity: 0,
+  //       scale: 0.8,
+  //       y: -5,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       scale: 1,
+  //       y: 5,
+  //       duration: 0.6,
+  //       delay: 0.6,
+  //     }
+  //   );
+ 
+  // }, []);
+
   useGSAP(() => {
-    // Animate heroRef once on mount
-    gsap.fromTo(
-      heroRef.current,
-      {
-        opacity: 0,
-        scale: 0.9,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0, // <-- keep at 0 so no conflict
-        duration: 0.8,
-        delay: 0.4,
-        ease: "power3.out",
-      }
-    );
+    gsap.from(heroRef.current,{
+      opacity:0,
+      y: 40,
+      scale:0.8,
+      duration:0.6,
+      delay:0.4
+    })
 
-    // Scroll animations (if you want them active again)
-    // Text
-    // gsap.from(textRef.current, {
-    //   opacity: 0,
-    //   y: 60,
-    //   duration: 0.8,
-    //   ease: "power2.out",
-    //   scrollTrigger: {
-    //     trigger: textRef.current,
-    //     start: "top 80%",
-    //     end: "top 60%",
-    //     scrub: 1, // smoother
-    //   },
-    // });
+     //   const tl = gsap.timeline();
 
-    // Button
-    // gsap.from(buttonRef.current, {
-    //   opacity: 0,
-    //   scale: 0.9,
-    //   y: 30,
-    //   duration: 0.8,
-    //   ease: "power2.out",
-    //   scrollTrigger: {
-    //     trigger: buttonRef.current,
-    //     start: "top 80%",
-    //     end: "top 60%",
-    //     scrub: 1,
-    //   },
-    // });
-    // Cleanup on unmount
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
-  }, []);
+  //   // tl.from(textRef.current, {
+  //   //   opacity: 0,
+  //   //   y: -80,
+  //   //   duration: 0.6,
+  //   //   scrollTrigger: {
+  //   //     scrub: 2,
+  //   //     trigger: textRef.current,
+  //   //     start: "top 65%",
+  //   //     end: "top 50%",
+  //   //     marker: false,
+  //   //   },
+  //   // });
 
+  //   // tl.from(buttonRef.current, {
+  //   //   opacity: 0,
+  //   //   scale: 0.8,
+  //   //   y: 20,
+  //   //   duration: 0.6,
+  //   //   scrollTrigger: {
+  //   //     scrub: 2,
+  //   //     trigger: buttonRef.current,
+  //   //     start: "top 65%",
+  //   //     end: "top 50%",
+  //   //     marker: false,
+  //   //   },
+  //   // });
+  })
+  
   return (
     <div className="hero-background font-inter px-[20px] sm:px-[70px] lg:[85px] xl:px[100px]">
       <Header />

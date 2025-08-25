@@ -19,86 +19,83 @@ function Program() {
   const btnRef = useRef();
 
   useGSAP(() => {
-    const tl = gsap.timeline();
-
-    tl.from(imgRef.current, {
+    gsap.from(imgRef.current, {
       opacity: 0,
       y: 80,
       duration: 0.8,
       ease: "power3.out",
-            scrollTrigger: {
+      scrollTrigger: {
         scrub: 2,
         trigger: imgRef.current,
         start: "top 85%",
-        end: "top 75%",
+        end: "top 65%",
         marker: false,
       },
     })
-      .from(
+      gsap.from(
         headingRef.current,
         {
           opacity: 0,
           y: 40,
           duration: 0.6,
-                scrollTrigger: {
-        scrub: 2,
-        trigger: headingRef.current,
-        start: "top 85%",
-        end: "top 75%",
-        marker: false,
-      },
+          scrollTrigger: {
+            scrub: 2,
+            trigger: headingRef.current,
+            start: "top 85%",
+            end: "top 65%",
+            marker: false,
+          },
         },
         "-=0.4"
       )
-      .from(
+      gsap.from(
         subHeadingRef.current,
         {
           opacity: 0,
           y: 30,
           duration: 0.6,
-                scrollTrigger: {
-        scrub: 2,
-        trigger: subHeadingRef.current,
-        start: "top 85%",
-        end: "top 75%",
-        marker: false,
-      },
+          scrollTrigger: {
+            scrub: 2,
+            trigger: subHeadingRef.current,
+            start: "top 85%",
+            end: "top 65%",
+            marker: false,
+          },
         },
         "-=0.4"
       )
-      .from(
+      gsap.from(
         textRef.current,
         {
           opacity: 0,
           y: 30,
           duration: 0.6,
-                scrollTrigger: {
-        scrub: 2,
-        trigger: textRef.current,
-        start: "top 85%",
-        end: "top 75%",
-        marker: false,
-      },
+          scrollTrigger: {
+            scrub: 2,
+            trigger: textRef.current,
+            start: "top 85%",
+            end: "top 65%",
+            marker: false,
+          },
         },
         "-=0.3"
       )
-      .from(
+      gsap.from(
         btnRef.current,
         {
           opacity: 0,
           scale: 0.8,
           duration: 0.5,
-                scrollTrigger: {
-        scrub: 2,
-        trigger: btnRef.current,
-        start: "top 85%",
-        end: "top 75%",
-        marker: false,
-      },
+          scrollTrigger: {
+            scrub: 2,
+            trigger: btnRef.current,
+            start: "top 85%",
+            end: "top 65%",
+            marker: false,
+          },
         },
         "-=0.2"
       );
-      
   }, []);
 
   return (
@@ -136,7 +133,7 @@ function Program() {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               color: "transparent",
-            }} 
+            }}
           >
             our program
           </div>
