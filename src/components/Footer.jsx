@@ -135,21 +135,19 @@ const Footer = memo(() => {
               href="mailto: sachinrao@fundedarmy.com"
               className="text-white/70 font-inter text-[11px] sm:text-[14px] font-normal leading-[24px] sm:leading-[28px] underline cursor-pointer hover:text-[#82e95f] transition-colors duration-300 break-all sm:break-normal"
             >
-               sachinrao@fundedarmy.com
+              sachinrao@fundedarmy.com
             </a>
-          <div
-            className="uppercase backdrop-blur-[12.5px] w-[62px] sm:w-[128px] h-[23px] sm:h-[46px] border-[1px] pt-[2px] sm:pt-[14px] sm:pb-[17px] px-0 
-             text-[#01030e] text-center cursor-pointer border-white bg-[#82e95f] font-bold text-[12px] sm:text-[16px] 
-             leading-[20px] z-40 transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_#82e95f] hover:bg-[#6cd94d] hover:-translate-y-[2px] active:scale-90"
-          >
             <a
               href="https://sachin4803.graphy.com/s/authenticate?url=/t/myprofile"
               target="_blank"
               rel="noopener noreferrer"
+              className="uppercase backdrop-blur-[12.5px] w-[64px] sm:w-[92px] 2xl:w-[128px] h-[28px] sm:h-[38px] 2xl:h-[46px] border-[1px] 
+  pt-[4px] sm:pt-[8.5px] 2xl:pt-[14px] pb-[8.5px] px-0 text-[#01030e] text-center cursor-pointer border-white bg-[#82e95f] 
+  font-bold text-[12px] sm:text-[16px] leading-[20px] 
+  transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_#82e95f] hover:bg-[#6cd94d] hover:-translate-y-[2px] active:scale-90"
             >
               login
             </a>
-          </div>
           </div>
         </div>
 

@@ -119,9 +119,9 @@ function Promise() {
         ease: "none",
         scrollTrigger: {
           trigger: ".promise-scroll",
-          start: "top 90%",
-          end: "bottom botton",
-          scrub: 3,
+          start: "top 50%",
+          end: "bottom 70%",
+          scrub: 1,
         },
       }
     );
