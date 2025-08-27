@@ -208,7 +208,7 @@ function BuildTrade() {
       </div>
       <div
         ref={heroRef}
-        className="flex items-start flex-col-reverse xl:flex-row justify-between pt-[50px] sm:pt-[80px] gap-8 xl:gap-0"
+        className="flex items-start flex-col-reverse [@media(min-width:1386px)]:flex-row justify-between pt-[50px] sm:pt-[80px] gap-8 xl:gap-0"
       >
         {/* left */}
         <div>
@@ -243,7 +243,7 @@ function BuildTrade() {
             You can become a profitable trader in just 30 days of relentless
             focus.
           </p>
-          <p className="w-full xl:w-[667px] text-white text-[16px] sm:text-[20px] leading-[22px] sm:leading-[27px]">
+          <p className="w-full [@media(min-width:1386px)]:w-[667px] text-white text-[16px] sm:text-[20px] leading-[22px] sm:leading-[27px]">
             But only if you follow proven trading systems with the right
             strategies and mentorship.
             <br />
@@ -274,11 +274,12 @@ function BuildTrade() {
           </a>
         </div>
         {/* right */}
-        <img
-          src={teachTrade}
-          alt="Image"
-          className="w-full h-full object-cover sm:max-w-none mx-auto xl:mx-0"
-        />
+      <img
+  src={teachTrade}
+  alt="Image"
+  className="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] xl:max-w-[800px] object-cover mx-auto [@media(min-width:1386px)]:mx-0"
+/>
+
       </div>
     </div>
   );
