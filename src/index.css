@@ -198,7 +198,7 @@ div {
   .hero-background { height: 778px; }
 }
 @media (max-width: 1504px) {
-  .hero-background { height: 678px; }
+  .hero-background { height: 628px; }
 }
 @media (max-width: 1024px) {
   .hero-background { height: 998px; }
